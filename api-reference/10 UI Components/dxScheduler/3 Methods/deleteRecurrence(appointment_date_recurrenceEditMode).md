@@ -11,7 +11,7 @@ The initial appointment.
 ##### param(date): Date | String
 A date for which to delete a recurrence.
 
-##### param(recurrenceEditMode): 'dialog' | 'occurrence' | 'series'
+##### param(recurrenceEditMode): Enums.RecurrenceEditMode
 An edit mode for recurring appointments.
 
 ---
@@ -119,7 +119,7 @@ An edit mode for recurring appointments.
     })
     export class AppModule { }
 
-#####Vue 
+##### Vue 
 
     <!-- tab: App.vue -->
     <template>
@@ -161,7 +161,7 @@ An edit mode for recurring appointments.
     // ...
     ];
 
-#####React
+##### React
 
     <!-- tab: App.js -->
     import React, { useCallback } from 'react';

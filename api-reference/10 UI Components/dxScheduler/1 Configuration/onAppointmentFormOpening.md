@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is executed before an appointment details form appears. Use this function to customize the form.
 
-##### param(e): Object
+##### param(e): ui/scheduler:AppointmentFormOpeningEvent
 Information about the event.
 
 ##### field(e.appointmentData): dxSchedulerAppointment
@@ -16,7 +16,7 @@ The data of the appointment for which a form is opened.
 ##### field(e.cancel): Boolean
 If **true**, prevents the user from opening the appointment details form.
 
-##### field(e.component): dxScheduler
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -60,15 +60,15 @@ The table below lists 'mainGroup' editor names:
     </tr>
     <tr>
         <td>Subject</td>
-        <td>'text'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/Common/Object_Structures/dxSchedulerAppointment/#text">SchedulerAppointment.text</a> property.</td>
+        <td>'text'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxScheduler/Interfaces/dxSchedulerAppointment/#text">SchedulerAppointment.text</a> property.</td>
     </tr>
     <tr>
         <td>Start Date</td>
-        <td>'startDate'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/Common/Object_Structures/dxSchedulerAppointment/#startDate">SchedulerAppointment.startDate</a> property.</td>
+        <td>'startDate'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxScheduler/Interfaces/dxSchedulerAppointment/#startDate">SchedulerAppointment.startDate</a> property.</td>
     </tr>
     <tr>
         <td>End Date</td>
-        <td>'endDate'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/Common/Object_Structures/dxSchedulerAppointment/#endDate">SchedulerAppointment.endDate</a> property.</td>
+        <td>'endDate'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxScheduler/Interfaces/dxSchedulerAppointment/#endDate">SchedulerAppointment.endDate</a> property.</td>
     </tr>
     <tr>
         <td>All Day</td>
@@ -76,7 +76,7 @@ The table below lists 'mainGroup' editor names:
     </tr>
     <tr>
         <td>Description</td>
-        <td>'description'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/Common/Object_Structures/dxSchedulerAppointment/#description">SchedulerAppointment.description</a> property.</td>
+        <td>'description'. Corresponds to the <a href="https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxScheduler/Interfaces/dxSchedulerAppointment/#description">SchedulerAppointment.description</a> property.</td>
     </tr>
 </table>
 
@@ -316,8 +316,11 @@ The `mainGroup` consists of two columns. A custom item's [colSpan](/api-referenc
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/TimeZonesSupport/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/TimeZonesSupport/"
+}
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-scheduler-create-custom-editing-form"
 }
 
 #####See Also#####

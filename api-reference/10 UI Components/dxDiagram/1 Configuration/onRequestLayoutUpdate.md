@@ -5,9 +5,9 @@ default: null
 ---
 ---
 ##### shortDescription
-A function that is executed after diagram data is reloaded and allows you to specify whether or not the UI component should update the diagram layout.
+A function that allows you to specify whether or not the UI component should reapply its auto layout after diagram data is reloaded.
 
-##### param(e): Object
+##### param(e): ui/diagram:RequestLayoutUpdateEvent
 Information about the event.
 
 ##### field(e.allowed): Boolean
@@ -17,7 +17,7 @@ Specifies whether or not the diagram layout should be updated.
 ##### field(e.changes): Array<any>
 The received changes.
 
-##### field(e.component): dxDiagram
+##### field(e.component): {WidgetName}
 The UI component instance's name.
 
 ##### field(e.element): DxElement
@@ -27,10 +27,10 @@ The UI component instance's name.
 Model data. Available only if you use Knockout.
 
 ---
-The Diagram component updates the bound data source and reloads the diagram content each time a user changes diagram data by the UI. If you modify the data source directly (beyond the Diagram), use [push services](/concepts/70%20Data%20Binding/5%20Data%20Layer/3%20Data%20Modification/30%20Integration%20with%20Push%20Services.md '/Documentation/Guide/Data_Binding/Data_Layer/#Data_Modification/Integration_with_Push_Services') to notify the component about data modifications. In this case Diagram gets notifications about data source changes and reloads diagram content.
+The [autoLayout](/api-reference/10%20UI%20Components/dxDiagram/1%20Configuration/nodes/autoLayout '/Documentation/ApiReference/UI_Components/dxDiagram/Configuration/nodes/autoLayout/') option specifies an auto-layout algorithm that the UI component uses to build a diagram on data binding.
 
-Write the **onRequestLayoutUpdate** function to specify whether the UI component should recalculate and update the diagram layout after the data is reloaded.
+Write the **onRequestLayoutUpdate** function to specify whether the component should reapply its auto layout when a user changes diagram data in the UI or you modify the data source directly via [push services](/concepts/70%20Data%20Binding/5%20Data%20Layer/3%20Data%20Modification/30%20Integration%20with%20Push%20Services.md '/Documentation/Guide/Data_Binding/Data_Layer/#Data_Modification/Integration_with_Push_Services').
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Diagram/CustomShapesWithTemplatesWithEditing/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Diagram/CustomShapesWithTemplatesWithEditing/"
 }

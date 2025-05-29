@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed when a context menu item is clicked.
 
-##### param(e): Object
+##### param(e): ui/file_manager:ContextMenuItemClickEvent
 Information about the event that caused the function's execution.
 
-##### field(e.component): dxFileManager
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -34,13 +34,13 @@ The clicked item's index.
 ##### field(e.model): any
 Model data. Available only if you use Knockout.
 
-##### field(e.viewArea): 'navPane' | 'itemView'
+##### field(e.viewArea): Enums.FileManagerViewArea
 Specifies whether the context menu is invoked in the navigation panel or in the items area.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileManager/UICustomization/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileManager/UICustomization/"
 }
 
 ---

@@ -1,0 +1,15 @@
+---
+module: ui/gallery
+export: DisposingEvent
+type: Object
+inherits: EventInfo
+uid: ui/gallery:DisposingEvent
+generateTypeLink: 
+references: dxGallery.Options.onDisposing
+---
+---
+##### shortDescription
+The type of the [disposing]({basewidgetpath}/Events/#disposing) event handler's argument.
+
+---
+<!-- Description goes here -->

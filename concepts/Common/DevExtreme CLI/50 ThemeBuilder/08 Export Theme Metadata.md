@@ -35,7 +35,7 @@ A [predefined DevExtreme theme](/concepts/60%20Themes%20and%20Styles/05%20Predef
 The custom theme's color scheme.
 
 - `makeSwatch`      
-A flag that indicates whether the theme is a [color swatch](/concepts/60%20Themes%20and%20Styles/05%20Predefined%20Themes/70%20Color%20Swatches.md '/Documentation/Guide/Themes_and_Styles/Predefined_Themes/#Color_Swatches').
+A flag that indicates whether the theme is a [color swatch](/concepts/60%20Themes%20and%20Styles/05%20Predefined%20Themes/55%20Color%20Swatches.md '/Documentation/Guide/Themes_and_Styles/Predefined_Themes/#Color_Swatches').
 
 - `version`     
 The target DevExtreme version.
@@ -50,4 +50,4 @@ Run the following command to export the metadata as a `.json` file:
 
     devextreme export-theme-meta [--base-theme][--input-file][--output-file][--base][--help]
     // ===== or =====
-    npx -p devextreme-cli devextreme export-theme-meta [--base-theme][--input-file][--output-file][--base]
+    npx devextreme-cli export-theme-meta [--base-theme][--input-file][--output-file][--base]

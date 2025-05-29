@@ -5,9 +5,9 @@ default: false
 ---
 ---
 ##### shortDescription
-Specifies whether the field chooser allows searching in the *"All Fields"* section.
+Specifies whether the field chooser allows search operations in the *"All Fields"* section.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/IntegratedFieldChooser/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/IntegratedFieldChooser/"
 }

@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is executed when a pivot grid cell is clicked or tapped.
 
-##### param(e): Object
+##### param(e): ui/pivot_grid:CellClickEvent
 Information about the event.
 
 ##### field(e.area): String
@@ -28,7 +28,7 @@ The *column* area's fields.
 ##### field(e.columnIndex): Number
 The index of the column to which the clicked cell belongs.
 
-##### field(e.component): dxPivotGrid
+##### field(e.component): {WidgetName}
 The UI component [instance](/api-reference/10%20UI%20Components/Component/3%20Methods/instance().md '/Documentation/ApiReference/UI_Components/dxPivotGrid/Methods/#instance').
 
 ##### field(e.dataFields): Array<PivotGridDataSource_Options_fields>
@@ -50,6 +50,6 @@ The *row* area's fields.
 The index of the row to which the clicked cell belongs.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/DrillDown/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/DrillDown/"
 }

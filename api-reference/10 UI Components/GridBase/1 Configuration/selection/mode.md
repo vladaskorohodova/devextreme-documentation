@@ -1,8 +1,5 @@
 ---
 id: GridBase.Options.selection.mode
-acceptValues: 'single' | 'multiple' | 'none'
-type: String
-default: 'none'
 ---
 ---
 ##### shortDescription
@@ -34,3 +31,10 @@ Several rows can be in the selected state at a time.
         url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/MultipleRowSelection/",
         name: "TreeList"
     }
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-disable-selecting-certain-rows"
+}
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-multiple-cell-selection"
+}

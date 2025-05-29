@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed after an appointment is deleted from the data source.
 
-##### param(e): Object
+##### param(e): ui/scheduler:AppointmentDeletedEvent
 Information about the event.
 
 ##### field(e.appointmentData): dxSchedulerAppointment
 The deleted appointment's data.
 
-##### field(e.component): dxScheduler
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -26,6 +26,6 @@ The standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Re
 Model data. Available only if Knockout is used.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/Editing/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/Editing/"
 }

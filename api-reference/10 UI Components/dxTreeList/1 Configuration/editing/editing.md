@@ -1,6 +1,7 @@
 ---
 id: dxTreeList.Options.editing
-type: Object
+type: ui/tree_list:Editing
+inheritsType: ui/tree_list:Editing
 ---
 ---
 ##### shortDescription
@@ -11,8 +12,8 @@ The UI component allows a user to edit data in several modes, which are detailed
 
 [note] Editing does not work with [hierarchical data sources](https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/SimpleArrayHierarchicalStructure/) out of the box, but you can use the code sample from <a href="https://www.devexpress.com/Support/Center/Question/Details/T725094/treelist-how-to-perform-crud-operations-on-a-hierarchical-data-source" target="_blank">this KB</a> to implement it.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/RowEditing/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/RowEditing/"
 }
 
 #####See Also#####

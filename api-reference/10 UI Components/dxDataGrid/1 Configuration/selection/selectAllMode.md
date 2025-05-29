@@ -1,7 +1,6 @@
 ---
 id: dxDataGrid.Options.selection.selectAllMode
-acceptValues: 'allPages' | 'page'
-type: String
+type: Enums.SelectAllMode
 default: 'allPages'
 ---
 ---
@@ -19,10 +18,12 @@ Specifies the mode in which all the records are selected. Applies only if **sele
 - *"allPages"*  
  Selects records on all pages.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleRecordSelectionModes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/MultipleRecordSelectionModes/"
 } 
-
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-disable-selecting-certain-rows"
+}
 
 #####See Also#####
 - [Selection - User Interaction](/concepts/05%20UI%20Components/DataGrid/50%20Selection/10%20User%20Interaction.md '/Documentation/Guide/UI_Components/DataGrid/Selection/#User_Interaction')

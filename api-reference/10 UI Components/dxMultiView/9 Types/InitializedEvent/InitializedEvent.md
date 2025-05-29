@@ -1,0 +1,15 @@
+---
+module: ui/multi_view
+export: InitializedEvent
+type: Object
+inherits: InitializedEventInfo
+uid: ui/multi_view:InitializedEvent
+generateTypeLink: 
+references: dxMultiView.Options.onInitialized
+---
+---
+##### shortDescription
+The type of the [initialized]({basewidgetpath}/Events/#initialized) event handler's argument.
+
+---
+<!-- Description goes here -->

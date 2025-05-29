@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before the multi-tag is rendered.
 
-##### param(e): Object
+##### param(e): ui/tag_box:MultiTagPreparingEvent
 Information about the event.
 
 ##### field(e.cancel): Boolean
 Allows you to cancel replacing ordinary tags with the multi-tag.
 
-##### field(e.component): dxTagBox
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -32,8 +32,8 @@ The currently selected items.
 Allows you to change the multi-tag's text.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TagBox/TagCountLimitation/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TagBox/TagCountLimitation/"
 }
 
 #####See Also#####

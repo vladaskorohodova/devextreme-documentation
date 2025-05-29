@@ -69,7 +69,7 @@ When a user types a value into the TextBox, this value applies when the <a href=
 
 ---
 
-To process a new TextBox value, you need to handle the value change event. If the handling function is not going to be changed during the lifetime of the UI component, assign it to the [onValueChanged](/api-reference/10%20UI%20Components/dxTextEditor/1%20Configuration/onValueChanged.md '/Documentation/ApiReference/UI_Components/dxTextBox/Configuration/#onValueChanged') property when you configure the UI component.
+To process a new TextBox value, you need to handle the value change event. If the handling function is not going to be changed during the lifetime of the UI component, assign it to the [onValueChanged](/api-reference/10%20UI%20Components/dxTextBox/1%20Configuration/onValueChanged.md '/Documentation/ApiReference/UI_Components/dxTextBox/Configuration/#onValueChanged') property when you configure the UI component.
 
 ---
 ##### jQuery
@@ -186,9 +186,14 @@ To process a new TextBox value, you need to handle the value change event. If th
 
 ---
 
-If you are going to change event handlers at runtime, or if you need to attach several handlers to the value change event, subscribe to this event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxTextBox/Methods/#oneventName_eventHandler') method. This approach is more typical of jQuery.
+---
 
-    <!--JavaScript-->const valueChangedHandler1 = function (e) {
+##### jQuery
+
+If you are going to change event handlers at runtime, or if you need to attach several handlers to the value change event, subscribe to this event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxTextBox/Methods/#oneventName_eventHandler') method.
+
+    <!--JavaScript-->
+    const valueChangedHandler1 = function (e) {
         const previousValue = e.previousValue;
         const newValue = e.value;
         // First handler of the "valueChanged" event
@@ -203,6 +208,8 @@ If you are going to change event handlers at runtime, or if you need to attach s
     $("#textBoxContainer").dxTextBox("instance")
         .on("valueChanged", valueChangedHandler1)
         .on("valueChanged", valueChangedHandler2);
+
+---
 
 #####See Also#####
 #include common-link-handleevents

@@ -1,10 +1,9 @@
 ---
 id: dxChart.Options.argumentAxis.minVisualRangeLength
-acceptValues: 'day' | 'hour' | 'millisecond' | 'minute' | 'month' | 'quarter' | 'second' | 'week' | 'year'
-type: Number | Object | String
 inherits: VizTimeInterval
-default: undefined
 notUsedInTheme: 
+type: Number | Object | Enums.TimeInterval
+default: undefined
 ---
 ---
 ##### shortDescription

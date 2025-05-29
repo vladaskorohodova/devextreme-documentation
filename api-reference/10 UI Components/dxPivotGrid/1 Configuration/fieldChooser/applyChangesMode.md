@@ -1,7 +1,6 @@
 ---
 id: dxPivotGrid.Options.fieldChooser.applyChangesMode
-acceptValues: 'instantly' | 'onDemand'
-type: String
+type: Enums.ApplyChangesMode
 default: 'instantly'
 ---
 ---
@@ -17,6 +16,6 @@ Applies changes immediately.
 - *"onDemand"*      
 Applies changes when a user clicks **OK** or cancels them when a user clicks **Cancel**. 
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/IntegratedFieldChooser/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/IntegratedFieldChooser/"
 }

@@ -1,7 +1,8 @@
 ---
 id: dxChart.Options.valueAxis
-type: Object | Array<Object>
+type: Array<viz/chart:ValueAxis>
 inherits: dxChart.Options.commonAxisSettings
+inheritsType: viz/chart:ValueAxis
 ---
 ---
 ##### shortDescription
@@ -12,6 +13,6 @@ Configures the value axis.
 
 The **valueAxis** object, which is described here, configures the value axis individually. To specify common settings for all axes in a chart, use the [commonAxisSettings](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/commonAxisSettings '/Documentation/ApiReference/UI_Components/dxChart/Configuration/commonAxisSettings/') object. Axis-specific settings override common settings.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/MultipleAxes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/MultipleAxes/"
 }

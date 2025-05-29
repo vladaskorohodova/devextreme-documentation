@@ -1,8 +1,9 @@
 ---
 id: dxPolarChart.Options.argumentAxis.strips
-type: Array<Object>
+type: Array<viz/polar_chart:ArgumentAxisStrips>
 inherits: dxPolarChart.Options.commonAxisSettings.stripStyle
 notUsedInTheme: 
+inheritsType: viz/polar_chart:ArgumentAxisStrips
 ---
 ---
 ##### shortDescription

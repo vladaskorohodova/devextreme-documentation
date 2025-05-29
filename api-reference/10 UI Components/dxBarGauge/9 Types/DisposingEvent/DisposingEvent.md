@@ -1,0 +1,15 @@
+---
+module: viz/bar_gauge
+export: DisposingEvent
+type: Object
+inherits: EventInfo
+uid: viz/bar_gauge:DisposingEvent
+generateTypeLink: 
+references: dxBarGauge.Options.onDisposing
+---
+---
+##### shortDescription
+The type of the [disposing]({basewidgetpath}/Events/#disposing) event handler's argument.
+
+---
+<!-- Description goes here -->

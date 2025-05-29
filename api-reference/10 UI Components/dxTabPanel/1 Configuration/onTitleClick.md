@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed when a tab is clicked or tapped.
 
-##### param(e): Object
+##### param(e): ui/tab_panel:TitleClickEvent
 Information about the event.
 
-##### field(e.component): dxTabPanel
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement

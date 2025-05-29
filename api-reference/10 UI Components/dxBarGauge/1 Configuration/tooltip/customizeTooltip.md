@@ -27,6 +27,6 @@ The tooltip's text or markup and color.
 
 #include dataviz-ref-functioncontext
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Tooltip/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Tooltip/"
 }

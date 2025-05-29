@@ -7,14 +7,14 @@ default: null
 ##### shortDescription
 A function used to customize a cell's [editor](/api-reference/_hidden/GridBaseColumn/editorOptions.md '{basewidgetpath}/Configuration/columns/#editorOptions'). Not executed for cells with an [editCellTemplate](/api-reference/_hidden/dxDataGridColumn/editCellTemplate.md '{basewidgetpath}/Configuration/columns/#editCellTemplate').
 
-##### param(e): Object
+##### param(e): ui/data_grid:EditorPreparingEvent
 Information about the event that caused the function's execution.
 
 ##### field(e.cancel): Boolean
 Allows you to cancel the editor's creation.        
 You can set this field's value to **true** and implement a custom editor.
 
-##### field(e.component): dxDataGrid
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.dataField): String
@@ -28,7 +28,7 @@ Indicates whether the editor is disabled.
 
 ##### field(e.editorName): String
 Allows you to change the editor. Accepts names of DevExtreme UI components only, for example, *"dxTextBox"*.      
-Import a new editor's module when [DevExtreme modules](/concepts/Common/Modularity/01%20Link%20Modules/10%20Use%20Webpack.md '/Documentation/Guide/Common/Modularity/') are used.
+Import a new editor's module when [DevExtreme modules](/concepts/Common/Modularity/02%20DevExtreme%20Modules%20Structure '/Documentation/Guide/Common/Modularity/DevExtreme_Modules_Structure/') are used.
 
 ##### field(e.editorOptions): Object
 Gets and sets the editor's configuration.
@@ -52,7 +52,7 @@ The [properties](/api-reference/10%20UI%20Components/dxDataGrid/6%20Row '/Docume
 ##### field(e.rtlEnabled): Boolean
 Indicates whether the editor uses right-to-left representation.
 
-##### field(e.setValue(newValue, newText)): any
+##### field(e.setValue): any
 A method you should call to change the cell value and, optionally, the displayed value after the editor's value is changed.
 
 ##### field(e.updateValueTimeout): Number
@@ -252,15 +252,15 @@ Use the **parentType** function parameter to check if the editor that the functi
 
 - Implement other customization cases.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CommandColumnCustomization/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CommandColumnCustomization/"
 }
 
 [note]
 
-- We do not recommend that you use the **onEditorPreparing** function to specify an editor's default value. Use the [onInitNewRow](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/onInitNewRow.md '{basewidgetpath}/Configuration/#onInitNewRow') function instead.
+- We do not recommend that you use the **onEditorPreparing** function to specify an editor's default value. Use the [onInitNewRow](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/onInitNewRow.md '{basewidgetpath}/Configuration/#onInitNewRow') function instead.
 
-- This function has the highest priority over the other editing tools. The order of priority is as follows: **onEditorPreparing** > [columns](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/columns '{basewidgetpath}/Configuration/columns/').[formItem](/api-reference/_hidden/GridBaseColumn/formItem.md '{basewidgetpath}/Configuration/columns/#formItem') > [editing](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/editing '{basewidgetpath}/Configuration/editing/').[form](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/editing/form.md '{basewidgetpath}/Configuration/editing/#form').
+- This function has the highest priority over the other editing tools. The order of priority is as follows: **onEditorPreparing** > [columns](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/columns '{basewidgetpath}/Configuration/columns/').[formItem](/api-reference/_hidden/GridBaseColumn/formItem.md '{basewidgetpath}/Configuration/columns/#formItem') > [editing](/api-reference/10%20UI%20Components/dxDataGrid/9%20Types/Editing '{basewidgetpath}/Configuration/editing/').[form](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/editing/form.md '{basewidgetpath}/Configuration/editing/#form').
 
 [/note]
 

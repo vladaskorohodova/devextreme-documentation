@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is called when the draggable items are reordered.
 
-##### param(e): Object
+##### param(e): ui/sortable:ReorderEvent
 Information about the event that caused the function's execution.
 
-##### field(e.component): dxSortable
+##### field(e.component): {WidgetName}
 The UI component that raised the event.
 
 ##### field(e.dropInsideItem): Boolean

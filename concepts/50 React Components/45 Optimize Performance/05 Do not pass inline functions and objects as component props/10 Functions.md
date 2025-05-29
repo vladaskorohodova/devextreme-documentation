@@ -1,4 +1,4 @@
-Extract inline handlers from the component class or function body. As an alternative, you can leave them within the component, but in this case wrap them in the [useCallback](https://reactjs.org/docs/hooks-reference.html#usecallback) hook (in function components) or extract them from the render function (in class components).
+Extract inline handlers from the component class or function body. As an alternative, you can leave them within the component, but in this case wrap them in the [useCallback](https://react.dev/reference/react/useCallback) hook (in function components) or extract them from the render function (in class components).
 
     <!-- tab: App.js -->// Incorrect: Inline function
     function App() {
@@ -61,6 +61,6 @@ Extract inline handlers from the component class or function body. As an alterna
 
     export default App;
 
-#include common-githubbutton with {
-    url: "https://codesandbox.io/s/master-detail-api-devextreme-data-grid-forked-bzeqts?file=/App.js"
+#include btn-open-codesandbox with {
+    href: "https://codesandbox.io/s/master-detail-api-devextreme-data-grid-forked-bzeqts?file=/App.js"
 }

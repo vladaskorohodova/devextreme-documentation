@@ -47,7 +47,7 @@ The row's [type](/api-reference/10%20UI%20Components/dxTreeList/6%20Row/rowType.
 The cell's raw value.
 
 ##### field(cellInfo.watch): function()
-Allows tracking a variable and performing actions when it changes. Applies when [repaintChangesOnly](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/repaintChangesOnly.md '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/#repaintChangesOnly') is **true**.       
+Allows you to track a variable and respond to value changes. Applies when [repaintChangesOnly](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/repaintChangesOnly.md '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/#repaintChangesOnly') is **true**.       
 This function has the following parameters:     
 
 - **getter(data)**: <font size="-1">Function</font>        
@@ -62,8 +62,8 @@ A template name or container.
 ---
 [note]If you implement two-way data binding in your template, make sure that you have switched off the built-in implementation of this feature by setting the [twoWayBindingEnabled](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/twoWayBindingEnabled.md '{basewidgetpath}/Configuration/#twoWayBindingEnabled') property to **false**.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/Overview/"
 }
 
 #####See Also#####

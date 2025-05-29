@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed after users select a task or clear its selection.
 
-##### param(e): Object
+##### param(e): ui/gantt:SelectionChangedEvent
 Information about the event that caused the function's execution.
 
-##### field(e.component): dxGantt
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -23,8 +23,8 @@ Model data. Available only if you use Knockout.
 The key of the row whose selection state was changed.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gantt/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gantt/Overview/"
 }
 
 ---

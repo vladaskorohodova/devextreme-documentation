@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before the focused row changes. Applies only to data or group rows. [focusedRowEnabled](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/focusedRowEnabled.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/#focusedRowEnabled') should be **true**.
 
-##### param(e): Object
+##### param(e): ui/data_grid:FocusedRowChangingEvent
 Information about the event that caused the function's execution.
 
 ##### field(e.cancel): Boolean
 Allows you to cancel focusing a new row.
 
-##### field(e.component): dxDataGrid
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -38,8 +38,8 @@ The index of the previously focused row.
 The visible rows' properties.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/FocusedRow/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/FocusedRow/"
 }
 
 #####See Also#####

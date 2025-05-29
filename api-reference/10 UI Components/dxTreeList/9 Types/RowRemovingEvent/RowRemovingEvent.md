@@ -1,0 +1,15 @@
+---
+module: ui/tree_list
+export: RowRemovingEvent
+type: Object
+inherits: EventInfo,RowRemovingInfo
+uid: ui/tree_list:RowRemovingEvent
+generateTypeLink: 
+references: dxTreeList.Options.onRowRemoving
+---
+---
+##### shortDescription
+The type of the [rowRemoving]({basewidgetpath}/Events/#rowRemoving) event handler's argument.
+
+---
+<!-- Description goes here -->

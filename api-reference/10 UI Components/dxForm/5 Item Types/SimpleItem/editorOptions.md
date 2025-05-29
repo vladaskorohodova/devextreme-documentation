@@ -8,14 +8,14 @@ default: undefined
 Configures the form item's editor.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/CustomizeItem/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/CustomizeItem/"
 }
-
-**editorOptions** should contain the properties of the DevExtreme editor specified in the [editorType](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/editorType.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#editorType'). Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components in Angular, Vue, and React. In these frameworks, specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component in Vue and React to prevent possible issues caused by unnecessary re-rendering. Alternatively, you can configure a custom editor in a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template').
 
 ---
 ##### Angular
+
+**editorOptions** should contain the properties of the DevExtreme editor specified in the [editorType](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/editorType.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#editorType'). Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object. Alternatively, you can configure a custom editor in a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template').
 
     <!-- tab: app.component.html -->
     <dx-form ... >
@@ -46,6 +46,8 @@ Configures the form item's editor.
     export class AppModule { }
 
 ##### Vue
+
+**editorOptions** should contain the properties of the DevExtreme editor specified in the [editorType](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/editorType.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#editorType'). Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component to prevent possible issues caused by unnecessary re-rendering. Alternatively, you can configure a custom editor in a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template').
 
     <!-- tab: App.vue -->
     <template>
@@ -79,6 +81,8 @@ Configures the form item's editor.
 
 ##### React
 
+**editorOptions** should contain the properties of the DevExtreme editor specified in the [editorType](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/editorType.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#editorType'). Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component to prevent possible issues caused by unnecessary re-rendering. Alternatively, you can configure a custom editor in a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template').
+
     <!-- tab: App.js -->
     import React from 'react';
 
@@ -106,7 +110,11 @@ Configures the form item's editor.
 
 ---
 
-[note] If you set the `id` and `name` attributes using the [inputAttr](/api-reference/10%20UI%20Components/dxTextEditor/1%20Configuration/inputAttr.md '/Documentation/ApiReference/UI_Components/dxTextBox/Configuration/#inputAttr') property, they will be overwritten. The Form generates these attributes automatically and uses them for addressing the DOM elements.
+[note] If you set the `id` and `name` attributes using the [inputAttr](/api-reference/10%20UI%20Components/dxTextBox/1%20Configuration/inputAttr.md '/Documentation/ApiReference/UI_Components/dxTextBox/Configuration/#inputAttr') property, they will be overwritten. The Form generates these attributes automatically and uses them for addressing the DOM elements.
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-display-htmleditor-in-form-editing-mode"
+}
 
 #####See Also#####
 - [Configure Simple Items](/concepts/05%20UI%20Components/Form/05%20Configure%20Simple%20Items '/Documentation/Guide/UI_Components/Form/Configure_Simple_Items/')

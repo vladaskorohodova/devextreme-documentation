@@ -1,0 +1,15 @@
+---
+module: ui/context_menu
+export: ContentReadyEvent
+type: Object
+inherits: EventInfo
+uid: ui/context_menu:ContentReadyEvent
+generateTypeLink: 
+references: dxContextMenu.Options.onContentReady
+---
+---
+##### shortDescription
+The type of the [contentReady]({basewidgetpath}/Events/#contentReady) event handler's argument.
+
+---
+<!-- Description goes here -->

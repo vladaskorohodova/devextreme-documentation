@@ -1,7 +1,6 @@
 ---
 id: dxHtmlEditorImageUpload.fileUploadMode
-acceptValues: 'base64' | 'server' | 'both'
-type: String
+type: Enums.HtmlEditorImageUploadMode
 default: 'base64'
 ---
 ---
@@ -9,8 +8,10 @@ default: 'base64'
 Specifies how the HtmlEditor UI component uploads files.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/HtmlEditor/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/HtmlEditor/Overview/"
 }
+
+If you set **fileUploadMode** to `server` or `both`, you need to specify [uploadUrl](/api-reference/_hidden/dxHtmlEditorImageUpload/uploadUrl.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/imageUpload/#uploadUrl') and [uploadDirectory](/api-reference/_hidden/dxHtmlEditorImageUpload/uploadDirectory.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/imageUpload/#uploadDirectory').
 
 Refer to the [imageUpload](/api-reference/10%20UI%20Components/dxHtmlEditor/1%20Configuration/imageUpload '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/imageUpload/') topic to see an example.

@@ -1,7 +1,10 @@
-#include common-troubleunderstanding-note with {
-    technology: "React",
-    docsLink: "https://reactjs.org/docs/getting-started.html"
-}
+[important]
+
+You should be familiar with the basic concepts and patterns of React to use this documentation. If you are not, please refer to the <a href="https://react.dev/learn" target="_blank">React documentation</a> for a getting-started tutorial.
+
+If you are already familiar with React, we recommend that you read the following help topic for tips and tricks on working with DevExtreme React components: [Optimize Performance](/concepts/50%20React%20Components/45%20Optimize%20Performance/00%20Optimize%20Performance.md '/Documentation/Guide/React_Components/Optimize_Performance/').
+
+[/important]
 
 [note] DevExtreme provides two React UI component libraries: DevExtreme React UI Components described here and <a href="https://github.com/DevExpress/devextreme-reactive/blob/master/README.md" target="_blank">DevExtreme Reactive Components</a>. Refer to <a href="https://community.devexpress.com/blogs/oliver/archive/2018/04/20/devextreme-new-react-wrappers-vs-native-react-components.aspx" target="_blank">this blog post</a> for a detailed comparison of the two libraries.
 
@@ -27,7 +30,7 @@ All DevExtreme UI component suites, including React, share architecture and core
 
 - [Localization](/concepts/Common/Localization '/Documentation/Guide/Common/Localization/')
 
-- [Modularity](/concepts/Common/Modularity/01%20Link%20Modules '/Documentation/Guide/Common/Modularity/Link_Modules/')
+- [Modularity](/concepts/Common/Modularity/02%20DevExtreme%20Modules%20Structure '/Documentation/Guide/Common/Modularity/DevExtreme_Modules_Structure/')
 
 - [Customization using templates](/concepts/05%20UI%20Components/zz%20Common/30%20Templates '/Documentation/Guide/UI_Components/Common/Templates/')
 

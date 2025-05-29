@@ -1,7 +1,7 @@
 ---
 id: dxChart.Options.legend.customizeText
-type: function(seriesInfo)
 notUsedInTheme: 
+type: function(seriesInfo)
 ---
 ---
 ##### shortDescription

@@ -1,0 +1,15 @@
+---
+module: ui/data_grid
+export: ExportingEvent
+type: Object
+inherits: Cancelable,EventInfo
+uid: ui/data_grid:ExportingEvent
+generateTypeLink: 
+references: dxDataGrid.Options.onExporting
+---
+---
+##### shortDescription
+The type of the [exporting]({basewidgetpath}/Events/#exporting) event handler's argument.
+
+---
+<!-- Description goes here -->

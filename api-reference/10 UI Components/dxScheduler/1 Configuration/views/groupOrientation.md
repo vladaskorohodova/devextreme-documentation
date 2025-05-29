@@ -1,7 +1,6 @@
 ---
 id: dxScheduler.Options.views.groupOrientation
-acceptValues: 'horizontal' | 'vertical'
-type: String
+type: Enums.Orientation
 ---
 ---
 ##### shortDescription
@@ -16,8 +15,8 @@ For the **day**, **month**, **week**, and **workWeek** view types.
 - *"vertical"*          
 For the **timelineDay**, **timelineMonth**, **timelineWeek**, and **timelineWorkWeek** view types. For the **agenda**, resource headers are always organized vertically.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/GroupOrientation/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/GroupOrientation/"
 }
 
 #####See Also#####

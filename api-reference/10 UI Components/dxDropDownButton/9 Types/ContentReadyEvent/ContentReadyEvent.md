@@ -1,0 +1,15 @@
+---
+module: ui/drop_down_button
+export: ContentReadyEvent
+type: Object
+inherits: EventInfo
+uid: ui/drop_down_button:ContentReadyEvent
+generateTypeLink: 
+references: dxDropDownButton.Options.onContentReady
+---
+---
+##### shortDescription
+The type of the [contentReady]({basewidgetpath}/Events/#contentReady) event handler's argument.
+
+---
+<!-- Description goes here -->

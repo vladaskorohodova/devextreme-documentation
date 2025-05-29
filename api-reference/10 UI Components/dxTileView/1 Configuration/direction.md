@@ -1,7 +1,6 @@
 ---
 id: dxTileView.Options.direction
-acceptValues: 'horizontal' | 'vertical'
-type: String
+type: Enums.Orientation
 default: 'horizontal'
 ---
 ---
@@ -10,6 +9,6 @@ Specifies whether the UI component is oriented horizontally or vertically.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Tile_View/Directions/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Tile_View/Directions/"
 }

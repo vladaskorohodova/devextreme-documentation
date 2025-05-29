@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed on each scroll gesture performed on the drop-down item list.
 
-##### param(e): Object
+##### param(e): ui/lookup:ScrollEvent
 Information about the event.
 
-##### field(e.component): dxLookup
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement

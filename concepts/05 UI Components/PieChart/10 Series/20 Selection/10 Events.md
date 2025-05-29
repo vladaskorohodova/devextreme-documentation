@@ -1,4 +1,4 @@
-When a user selects a series point, the PieChart fires the [pointSelectionChanged](/api-reference/10%20UI%20Components/BaseChart/4%20Events/pointSelectionChanged.md '/Documentation/ApiReference/UI_Components/dxPieChart/Events/#pointSelectionChanged') event that you can handle with a function. Assign this function to the [onPointSelectionChanged](/api-reference/10%20UI%20Components/BaseChart/1%20Configuration/onPointSelectionChanged.md '/Documentation/ApiReference/UI_Components/dxPieChart/Configuration/#onPointSelectionChanged') property when you configure the UI component if it is going to remain unchanged during the UI component's lifetime. Call the point's [isSelected()](/api-reference/10%20UI%20Components/BaseChart/7%20Chart%20Elements/Point/3%20Methods/isSelected().md '/Documentation/ApiReference/UI_Components/dxPieChart/Chart_Elements/Point/Methods/#isSelected') method to check whether it was selected or the selection was cleared.
+When a user selects a series point, the PieChart fires the [pointSelectionChanged](/api-reference/10%20UI%20Components/BaseChart/4%20Events/pointSelectionChanged.md '/Documentation/ApiReference/UI_Components/dxPieChart/Events/#pointSelectionChanged') event that you can handle with a function. Assign this function to the [onPointSelectionChanged](/api-reference/10%20UI%20Components/dxPieChart/1%20Configuration/onPointSelectionChanged.md '/Documentation/ApiReference/UI_Components/dxPieChart/Configuration/#onPointSelectionChanged') property when you configure the UI component if it is going to remain unchanged during the UI component's lifetime. Call the point's [isSelected()](/api-reference/10%20UI%20Components/BaseChart/7%20Chart%20Elements/Point/3%20Methods/isSelected().md '/Documentation/ApiReference/UI_Components/dxPieChart/Chart_Elements/Point/Methods/#isSelected') method to check whether it was selected or the selection was cleared.
 
 ---
 ##### jQuery
@@ -100,7 +100,10 @@ When a user selects a series point, the PieChart fires the [pointSelectionChange
 
 ---
 
-Subscribe to the **pointSelectionChanged** event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxPieChart/Methods/#oneventName_eventHandler') method if you are going to change the event handler at runtime or if you need to attach several handlers to the event. This approach is more typical of jQuery.
+---
+##### jQuery
+
+Subscribe to the **pointSelectionChanged** event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxPieChart/Methods/#oneventName_eventHandler') method if you are going to change the event handler at runtime or if you need to attach several handlers to the event.
 
     <!--JavaScript-->
     var pointSelectionChangedHandler1 = function (e) {
@@ -116,6 +119,8 @@ Subscribe to the **pointSelectionChanged** event using the [on(eventName, eventH
     $("#pieChartContainer").dxPieChart("instance")
         .on("pointSelectionChanged", pointSelectionChangedHandler1)
         .on("pointSelectionChanged", pointSelectionChangedHandler2);
+
+---
 
 #####See Also#####
 #include common-link-handleevents

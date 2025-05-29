@@ -1,7 +1,6 @@
 ---
 id: PivotGridDataSource.Options.fields.sortOrder
-acceptValues: 'asc' | 'desc'
-type: String
+type: Enums.SortOrder
 default: 'asc'
 ---
 ---
@@ -9,8 +8,8 @@ default: 'asc'
 Specifies the field values' sorting order.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/WebAPIService/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/WebAPIService/"
 }
 
 #####See Also#####

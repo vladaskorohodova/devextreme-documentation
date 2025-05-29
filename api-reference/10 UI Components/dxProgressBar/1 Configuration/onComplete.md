@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed when the [value](/api-reference/10%20UI%20Components/dxProgressBar/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxProgressBar/Configuration/#value') reaches the [maximum](/api-reference/10%20UI%20Components/dxTrackBar/1%20Configuration/max.md '/Documentation/ApiReference/UI_Components/dxProgressBar/Configuration/#max').
 
-##### param(e): Object
+##### param(e): ui/progress_bar:CompleteEvent
 Information about the event.
 
-##### field(e.component): dxProgressBar
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -23,6 +23,6 @@ The UI component's instance.
 Model data. Available only if Knockout is used.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/ProgressBar/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/ProgressBar/Overview/"
 }

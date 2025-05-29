@@ -16,13 +16,17 @@ The option's name.
 The new option value.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/UpdateItemsDynamically/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/UpdateItemsDynamically/"
 }
 
-The following code shows how to call this method for an item organized in a group:
+---
 
-    <!--JavaScript-->
+##### jQuery
+
+The following code shows how to call this method for an item organized in a group.
+
+    <!-- tab: index.js -->
     $(function () {
         const form = $("#formContainer").dxForm({
             formData: {
@@ -38,15 +42,16 @@ The following code shows how to call this method for an item organized in a grou
                 items: ["phone", "email"]
             }]
         }).dxForm("instance");
-    });
 
-<!------>
-
-    <!--JavaScript-->
+    // ...
+    
     form.itemOption("groupName.phone", "visible", false);
     // ==== or ====
     form.itemOption("Contacts.phone", "visible", false);
 
+    });
+
+---
 
 #include form-item-options
 

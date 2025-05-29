@@ -1,8 +1,8 @@
 ---
 id: dxChart.Options.valueAxis.name
+notUsedInTheme: 
 type: String
 default: undefined
-notUsedInTheme: 
 ---
 ---
 ##### shortDescription

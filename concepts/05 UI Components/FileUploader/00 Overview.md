@@ -1,7 +1,7 @@
 The FileUploader UI component enables an end user to upload files to the server. An end user can select files in the file explorer or drag and drop files on the page's FileUploader area.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileUploader/FileSelection/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileUploader/FileSelection/"
 }
 
 The following code adds the FileUploader to your page. Use the [accept](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/accept.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#accept') property to restrict the file types that can be uploaded to the server. This property is like the underlying `<input>` element's *"accept"* attribute and accepts the same values described <a href="http://www.w3schools.com/TAGs/att_input_accept.asp" target="_blank">here</a>.
@@ -87,7 +87,7 @@ The following code adds the FileUploader to your page. Use the [accept](/api-ref
 
 ---
 
-A user can upload only one file at a time. Set the [multiple](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/multiple.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#multiple') property to **true** to allow uploading several files at once.
+A user can upload only one file at a time. Set the [multiple](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/multiple.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#multiple') property to **true** to allow users to upload several files at once.
 
 ---
 ##### jQuery
@@ -166,20 +166,17 @@ A user can upload only one file at a time. Set the [multiple](/api-reference/10%
 
 ---
 
-If you need to access the selected files at runtime, get the value of the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property. The following command returns an array, whose members are each an instance implementing the <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank">File interface</a>.
-
 ---
 ##### jQuery
+
+If you need to access the selected files at runtime, get the value of the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property. The following command returns an array, whose members are each an instance implementing the <a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank">File interface</a>.
 
     <!-- tab: index.js -->
     const files = $("#fileUploaderContainer").dxFileUploader("option", "value");
 
----
-
-With Angular, Vue, or React, use a different technique. Bind the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property of the FileUploader UI component to a component property. After that, you can access the file array within any method. 
-
----
 ##### Angular
+
+Bind the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property of the FileUploader UI component to a component property. After that, you can access the file array within any method.
 
     <!-- tab: app.component.ts -->
     import { DxFileUploaderModule } from "devextreme-angular";
@@ -205,6 +202,8 @@ With Angular, Vue, or React, use a different technique. Bind the [value](/api-re
     </dx-file-uploader>
 
 ##### Vue
+
+Bind the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property of the FileUploader UI component to a component property. After that, you can access the file array within any method.
 
     <!-- tab: App.vue -->
     <template>
@@ -235,6 +234,8 @@ With Angular, Vue, or React, use a different technique. Bind the [value](/api-re
     </script>
 
 ##### React
+
+Bind the [value](/api-reference/10%20UI%20Components/dxFileUploader/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxFileUploader/Configuration/#value') property of the FileUploader UI component to a component property. After that, you can access the file array within any method.
 
     <!-- tab: App.js -->
     import React, {useState} from 'react';

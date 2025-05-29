@@ -8,10 +8,10 @@ hidden: false
 ##### shortDescription
 A function that is executed after a list item is moved to another position.
 
-##### param(e): Object
+##### param(e): ui/list:ItemReorderedEvent
 Information about the event.
 
-##### field(e.component): dxList
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement

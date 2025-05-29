@@ -18,8 +18,7 @@ A UI element used to filter data.
 Possible values: [*"filterRow"*](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/filterRow '{basewidgetpath}/Configuration/filterRow/'), [*"headerFilter"*](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/headerFilter '{basewidgetpath}/Configuration/headerFilter/'), [*"filterBuilder"*](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/filterBuilder.md '{basewidgetpath}/Configuration/#filterBuilder'), [*"search"*](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/searchPanel '{basewidgetpath}/Configuration/searchPanel/').
 
 ##### return: Filter expression
-A filter expression.          
-If you filter data [remotely](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/remoteOperations '{basewidgetpath}/Configuration/remoteOperations/'), the filter expression must not contain functions.
+A filter expression.
 
 ##### context: GridBaseColumn
 The `this` keyword refers to the column's configuration.
@@ -51,7 +50,7 @@ The default *"between"* implementation is inclusive (filter results include the 
         $("#{widgetName}Container").dx{WidgetName}({
             // ...
             columns: [{
-                calculateFilterExpression: function (filterValue, selectedFilterOperation) {
+                calculateFilterExpression: function (filterValue, selectedFilterOperation, target) {
                     // Override implementation for the "between" filter operation
                     if (selectedFilterOperation === "between" && $.isArray(filterValue)) {
                         const filterExpression = [
@@ -62,6 +61,8 @@ The default *"between"* implementation is inclusive (filter results include the 
                         return filterExpression;
                     }
                     // Invoke the default implementation for other filter operations
+                    if(!this.defaultCalculateFilterExpression) 
+                        return [this.dataField, 'contains', filterValue];  
                     return this.defaultCalculateFilterExpression.apply(this, arguments);
                 },
                 // ...
@@ -73,21 +74,23 @@ The default *"between"* implementation is inclusive (filter results include the 
 
     <!--TypeScript-->
     import { Dx{WidgetName}Module } from "devextreme-angular";
+    import { Column } from 'devextreme/ui/data_grid';
     // ...
     export class AppComponent {
-        calculateFilterExpression (filterValue, selectedFilterOperation) {
-            const column = this as any;
+        calculateFilterExpression (this: Column, filterValue, selectedFilterOperation, target) {
             // Override implementation for the "between" filter operation
             if (selectedFilterOperation === "between" && Array.isArray(filterValue)) {
                 const filterExpression = [
-                    [column.dataField, ">", filterValue[0]], 
+                    [this.dataField, ">", filterValue[0]], 
                     "and", 
-                    [column.dataField, "<", filterValue[1]]
+                    [this.dataField, "<", filterValue[1]]
                 ];
                 return filterExpression;
             }
             // Invoke the default implementation for other filter operations
-            return column.defaultCalculateFilterExpression.apply(column, arguments);
+            if(!this.defaultCalculateFilterExpression) 
+                return [this.dataField, 'contains', filterValue];  
+            return this.defaultCalculateFilterExpression.apply(this, arguments);
         }
     }
     @NgModule({
@@ -130,19 +133,20 @@ The default *"between"* implementation is inclusive (filter results include the 
         },
         data() {
             return {
-                calculateFilterExpression (filterValue, selectedFilterOperation) {
-                    const column = this;
+                calculateFilterExpression (filterValue, selectedFilterOperation, target) {
                     // Override implementation for the "between" filter operation
                     if (selectedFilterOperation === "between" && Array.isArray(filterValue)) {
                         const filterExpression = [
-                            [column.dataField, ">", filterValue[0]], 
+                            [this.dataField, ">", filterValue[0]], 
                             "and", 
-                            [column.dataField, "<", filterValue[1]]
+                            [this.dataField, "<", filterValue[1]]
                         ];
                         return filterExpression;
                     }
                     // Invoke the default implementation for other filter operations
-                    return column.defaultCalculateFilterExpression.apply(column, arguments);
+                    if(!this.defaultCalculateFilterExpression) 
+                        return [this.dataField, 'contains', filterValue];  
+                    return this.defaultCalculateFilterExpression.apply(this, arguments);
                 }
             }
         }
@@ -159,7 +163,7 @@ The default *"between"* implementation is inclusive (filter results include the 
         Column
     } from 'devextreme-react/{widget-name}';
 
-    function calculateFilterExpression (filterValue, selectedFilterOperation) {
+    function calculateFilterExpression (filterValue, selectedFilterOperation, target) {
         // Override implementation for the "between" filter operation
         if (selectedFilterOperation === "between" && Array.isArray(filterValue)) {
             const filterExpression = [
@@ -170,6 +174,8 @@ The default *"between"* implementation is inclusive (filter results include the 
             return filterExpression;
         }
         // Invoke the default implementation for other filter operations
+        if(!this.defaultCalculateFilterExpression) 
+            return [this.dataField, 'contains', filterValue];  
         return this.defaultCalculateFilterExpression.apply(this, arguments);
     }
 
@@ -185,8 +191,8 @@ The default *"between"* implementation is inclusive (filter results include the 
     
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/Filtering/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/Filtering/"
 }
 
 [note]
@@ -194,6 +200,126 @@ The default *"between"* implementation is inclusive (filter results include the 
 If you [specify a custom header filter data source](/concepts/05%20UI%20Components/DataGrid/99%20How%20To/Customize%20Header%20Filter%20Data%20Source/10%20Specify%20a%20Custom%20Data%20Source.md '/Documentation/Guide/UI_Components/DataGrid/How_To/Customize_Header_Filter_Data_Source/#Specify_a_Custom_Data_Source'), a header filter item's `value` field can contain a single value (for example, 0) or a filter expression. If it is a filter expression, the **calculateFilterExpression** function does not apply.
 
 [/note]
+
+If you use the search panel, the DataGrid may invoke the **calculateFilterExpression** function multiple times for lookup columns. The first call is to filter the lookup's data source, and subsequent calls are to filter the DataGrid's data source.
+
+DataGrid uses *"anyof"* and *"noneof"* filter values for [headerFilter](/api-reference/_hidden/GridBaseColumn/headerFilter '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/columns/headerFilter/'). If you specify **calculateFilterExpression** for headerFilter, return an array of filterExpressions:
+
+---
+##### jQuery
+
+    <!--JavaScript-->$(function() {
+        $("#{widgetName}Container").dx{WidgetName}({
+            // ...
+            columns: [{
+                calculateFilterExpression(filterValue, selectedFilterOperation, target){
+                    if (target == "headerFilter") {
+                        // ...
+                        let filterExpression = ["myDataField", "contains", customValue];
+                        return [filterExpression];
+                    }
+                }
+                // ...
+            }]
+        });
+    });
+
+##### Angular
+
+    <!--TypeScript-->
+    import { Dx{WidgetName}Module } from "devextreme-angular";
+    import { Column } from 'devextreme/ui/data_grid';
+    // ...
+    export class AppComponent {
+        calculateFilterExpression(this: Column, filterValue, selectedFilterOperation, target){
+            if (target == "headerFilter") {
+                // ...
+                let filterExpression = ["myDataField", "contains", customValue];
+                return [filterExpression];
+            }
+        }
+    }
+    @NgModule({
+        imports: [
+            // ...
+            Dx{WidgetName}Module
+        ],
+        // ...
+    })
+
+    <!--HTML-->
+    <dx-{widget-name} ... >
+        <dxi-column ...
+            [calculateFilterExpression]="calculateFilterExpression">
+        </dxi-column>
+    </dx-{widget-name}>
+
+##### Vue
+
+    <!-- tab: App.vue -->
+    <template>
+        <Dx{WidgetName}>
+            <DxColumn ...
+                :calculate-filter-expression="calculateFilterExpression"
+            />
+        </Dx{WidgetName}>
+    </template>
+
+    <script>
+    import 'devextreme/dist/css/dx.light.css';
+
+    import Dx{WidgetName}, {
+        DxColumn
+    } from 'devextreme-vue/{widget-name}';
+
+    export default {
+        components: {
+            Dx{WidgetName},
+            DxColumn
+        },
+        data() {
+            return {
+                calculateFilterExpression(filterValue, selectedFilterOperation, target){
+                    if (target == "headerFilter") {
+                        // ...
+                        let filterExpression = ["myDataField", "contains", customValue];
+                        return [filterExpression];
+                    }
+                }
+            }
+        }
+    }
+    </script>
+
+##### React
+
+    <!-- tab: App.js -->
+    import React from 'react';
+    import 'devextreme/dist/css/dx.light.css';
+
+    import {WidgetName}, {
+        Column
+    } from 'devextreme-react/{widget-name}';
+
+    function calculateFilterExpression(filterValue, selectedFilterOperation, target){
+        if (target == "headerFilter") {
+            // ...
+            let filterExpression = ["myDataField", "contains", customValue];
+            return [filterExpression];
+        }
+    }
+    
+    export default function App() {
+        return (
+            <{WidgetName}>
+                <Column ...
+                    calculateFilterExpression={calculateFilterExpression}
+                />
+            </{WidgetName}>
+        );
+    }
+    
+---
 
 #####See Also#####
 - [filterValue](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/filterValue.md '{basewidgetpath}/Configuration/#filterValue')

@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed when a list item is swiped.
 
-##### param(e): Object
+##### param(e): ui/list:ItemSwipeEvent
 Information about the event.
 
-##### field(e.component): dxList
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.direction): String

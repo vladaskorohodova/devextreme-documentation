@@ -2,7 +2,7 @@
 id: dxDateBox
 module: ui/date_box
 export: default
-inherits: dxDropDownEditor
+inherits: DateBoxBase
 ---
 ---
 ##### shortDescription
@@ -15,8 +15,8 @@ opened: true
 dx.web.js, dx.all.js
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DateBox/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DateBox/Overview/"
 }
 #include common-tutorialbutton with {
     url: "/Documentation/Guide/UI_Components/DateBox/Getting_Started_with_DateBox/"

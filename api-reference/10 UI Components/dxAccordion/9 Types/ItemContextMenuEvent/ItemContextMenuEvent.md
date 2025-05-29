@@ -1,0 +1,15 @@
+---
+module: ui/accordion
+export: ItemContextMenuEvent
+type: Object
+inherits: NativeEventInfo,ItemInfo
+uid: ui/accordion:ItemContextMenuEvent
+generateTypeLink: 
+references: dxAccordion.Options.onItemContextMenu
+---
+---
+##### shortDescription
+The type of the [itemContextMenu]({basewidgetpath}/Events/#itemContextMenu) event handler's argument.
+
+---
+<!-- Description goes here -->

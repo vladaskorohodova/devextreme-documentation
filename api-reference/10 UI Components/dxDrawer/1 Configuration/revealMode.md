@@ -1,7 +1,6 @@
 ---
 id: dxDrawer.Options.revealMode
-acceptValues: 'slide' | 'expand'
-type: String
+type: Enums.RevealMode
 default: 'slide'
 ---
 ---
@@ -17,8 +16,10 @@ The drawer slides in. The drawer and its content are animated.
 * *"expand"*    
 The drawer expands from the closed position. The drawer's width is animated; its content is not.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Drawer/HorizontalOpening/"
+When you change the Drawer's reveal mode, the component needs to perform recalculations for animation. As a result, the [template](/api-reference/10%20UI%20Components/dxDrawer/1%20Configuration/template.md '/Documentation/ApiReference/UI_Components/dxDrawer/Configuration/#template') is rerendered which can increase loading time.
+
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Drawer/HorizontalOpening/"
 }
 
 #####See Also#####

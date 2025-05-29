@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is called when a new item is added.
 
-##### param(e): Object
+##### param(e): ui/sortable:AddEvent
 Information about the event that caused the function's execution.
 
 ##### field(e.component): dxSortable

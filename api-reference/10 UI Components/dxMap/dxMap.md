@@ -9,14 +9,17 @@ inherits: Widget
 The Map is an interactive UI component that displays a geographic map with markers and routes.
 
 ##### widgettree
-provider: "bing"
+provider: "bing",
+apiKey: {
+    bing: "Aq3LKP2BOmzWY47TZoT1YdieypN_rB6RY9FqBfx-MDCKjvvWBbT68R51xwbL-AqC"
+}
 
 ##### lib
 dx.web.js, dx.all.js
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Map/ProvidersAndTypes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Map/ProvidersAndTypes/"
 }
 #include common-readguidesbutton with {
     url: "/Documentation/Guide/UI_Components/Map/Overview/"

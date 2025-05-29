@@ -16,7 +16,7 @@ A source data array to be updated.
 ##### param(changes): Array<any>
 An array of changes to be applied.
 
-##### param(options?): Object
+##### param(options?): any | Object
 Configures how to apply changes.
 
 ##### field(options?.immutable): Boolean
@@ -28,6 +28,6 @@ Specifies the key property (or properties) that provide(s) keys to locate data i
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/EditStateManagement/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/EditStateManagement/"
 }

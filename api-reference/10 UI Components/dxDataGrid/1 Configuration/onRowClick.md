@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed when a row is clicked or tapped.
 
-##### param(e): Object
+##### param(e): ui/data_grid:RowClickEvent
 Information about the event that caused the function's execution.
 
 ##### field(e.columns): Array<Object>
 All column [configurations](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/columns '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/columns/').
 
-##### field(e.component): dxDataGrid
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.data): Object
@@ -70,7 +70,7 @@ In the following code, the **onRowClick** function calls the [editRow](/api-refe
     $(function() {
         $("#{widgetName}Container").dx{WidgetName}({
             // ...
-            editing: { mode: "form "},
+            editing: { mode: "form" },
             onRowClick: function(e) {
                 if(e.rowType === "data") {
                     e.component.editRow(e.rowIndex);

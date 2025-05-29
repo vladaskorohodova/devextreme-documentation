@@ -8,10 +8,10 @@ notUsedInTheme:
 ##### shortDescription
 A function that is executed when zooming or panning begins.
 
-##### param(e): Object
+##### param(e): viz/chart:ZoomStartEvent
 Information about the event.
 
-##### field(e.actionType): 'zoom' | 'pan'
+##### field(e.actionType): Enums.ZoomPanAction
 Indicates whether the user is zooming or panning the chart.
 
 ##### field(e.axis): chartAxisObject
@@ -20,7 +20,7 @@ The zoomed/panned axis.
 ##### field(e.cancel): Boolean
 Allows you to cancel zooming or panning.
 
-##### field(e.component): dxChart
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement

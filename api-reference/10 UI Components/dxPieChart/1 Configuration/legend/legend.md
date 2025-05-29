@@ -1,6 +1,7 @@
 ---
 id: dxPieChart.Options.legend
-type: Object
+type: viz/pie_chart:Legend
+inheritsType: viz/pie_chart:Legend
 ---
 ---
 ##### shortDescription

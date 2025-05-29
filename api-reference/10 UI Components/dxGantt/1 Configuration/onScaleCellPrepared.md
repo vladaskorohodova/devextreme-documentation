@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed before a scale cell is prepared.
 
-##### param(e): Object
+##### param(e): ui/gantt:ScaleCellPreparedEvent
 Information about the event.
 
-##### field(e.component): dxGantt
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -22,7 +22,7 @@ The scale cell.
 ##### field(e.scaleIndex): Number
 Specifies the scale's index.
 
-##### field(e.scaleType): 'minutes' | 'hours' | 'sixHours' | 'days' | 'weeks' | 'months' | 'quarters' | 'years' | 'fiveYears'
+##### field(e.scaleType): Enums.GanttRenderScaleType
 The scale type.
 
 ##### field(e.separatorElement): DxElement

@@ -94,3 +94,112 @@ Options to be applied.
     }
 
 ---
+
+You can also set rules for multiple device types:
+
+---
+##### jQuery
+
+    <!--JavaScript-->
+    const devicesConfig = [
+        { deviceType: 'desktop' },
+        { deviceType: 'tablet' },
+        { deviceType: 'phone' },
+    ];
+
+    devicesConfig.forEach(deviceConfig => {
+        DevExpress.ui.dx{WidgetName}.defaultOptions({ 
+            device: deviceConfig,
+            options: {
+                // Here go the {WidgetName} properties
+            }
+        });
+    });
+
+##### Angular
+
+    <!--TypeScript-->
+    import {WidgetName}, { Properties } from "devextreme/ui/{widget_name}";
+    // ...
+    export class AppComponent {
+        constructor () {
+            const devicesConfig = [
+                { deviceType: 'desktop' },
+                { deviceType: 'tablet' },
+                { deviceType: 'phone' },
+            ];
+
+            devicesConfig.forEach(deviceConfig => {
+                {WidgetName}.defaultOptions<Properties>({
+                    device: deviceConfig,
+                    options: {
+                        // Here go the {WidgetName} properties
+                    }
+                });
+            });
+        }
+    }
+
+##### Vue
+
+    <template>
+        <div>
+            <Dx{WidgetName} />
+        </div>
+    </template>
+    <script>
+    import Dx{WidgetName} from "devextreme-vue/{widget-name}";
+    import {WidgetName} from "devextreme/ui/{widget_name}";
+
+    const devicesConfig = [
+        { deviceType: 'desktop' },
+        { deviceType: 'tablet' },
+        { deviceType: 'phone' },
+    ];
+
+    devicesConfig.forEach(deviceConfig => {
+        {WidgetName}.defaultOptions({
+            device: deviceConfig,
+            options: {
+                // Here go the {WidgetName} properties
+            }
+        });
+    });
+
+    export default {
+        components: {
+            Dx{WidgetName}
+        }
+    }
+    </script>
+
+
+##### React
+
+    import dx{WidgetName} from "devextreme/ui/{widget_name}";
+    import {WidgetName} from "devextreme-react/{widget-name}";
+     
+    const devicesConfig = [
+        { deviceType: 'desktop' },
+        { deviceType: 'tablet' },
+        { deviceType: 'phone' },
+    ];
+
+    devicesConfig.forEach(deviceConfig => {
+        dx{WidgetName}.defaultOptions({
+            device: deviceConfig,
+            options: {
+                // Here go the {WidgetName} properties
+            }
+        });
+    });
+        
+    export default function App() {
+        return (
+            <div>
+                <{WidgetName} />
+            </div>
+        )
+    }
+
+---

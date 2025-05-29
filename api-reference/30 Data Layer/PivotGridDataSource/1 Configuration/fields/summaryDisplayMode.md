@@ -1,7 +1,6 @@
 ---
 id: PivotGridDataSource.Options.fields.summaryDisplayMode
-acceptValues: 'absoluteVariation' | 'percentOfColumnGrandTotal' | 'percentOfColumnTotal' | 'percentOfGrandTotal' | 'percentOfRowGrandTotal' | 'percentOfRowTotal' | 'percentVariation'
-type: String
+type: Enums.PivotGridSummaryDisplayMode
 default: undefined
 ---
 ---
@@ -34,10 +33,15 @@ The following list describes the available post-processing functions. These func
 - *"percentOfGrandTotal"*        
     Calculates the current value as a percentage in the grand total of the entire pivot grid.
 
+---
+
+##### jQuery
 You can implement the capability to select the post-processing function at runtime using instructions from the [Runtime Summary Type Selection](/concepts/05%20UI%20Components/PivotGrid/040%20Summaries/35%20Runtime%20Summary%20Type%20Selection.md '/Documentation/Guide/UI_Components/PivotGrid/Summaries/#Runtime_Summary_Type_Selection') article.
+
+---
 
 To specify a custom post-processing function, use the [calculateSummaryValue](/api-reference/30%20Data%20Layer/PivotGridDataSource/1%20Configuration/fields/calculateSummaryValue.md '/Documentation/ApiReference/Data_Layer/PivotGridDataSource/Configuration/fields/#calculateSummaryValue') property.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Pivot_Grid/SummaryDisplayModes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Pivot_Grid/SummaryDisplayModes/"
 }

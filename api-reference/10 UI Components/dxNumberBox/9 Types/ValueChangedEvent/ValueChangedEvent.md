@@ -1,0 +1,15 @@
+---
+module: ui/number_box
+export: ValueChangedEvent
+type: Object
+inherits: NativeEventInfo,ValueChangedInfo
+uid: ui/number_box:ValueChangedEvent
+generateTypeLink: 
+references: dxNumberBox.Options.onValueChanged
+---
+---
+##### shortDescription
+The type of the [valueChanged]({basewidgetpath}/Events/#valueChanged) event handler's argument.
+
+---
+<!-- Description goes here -->

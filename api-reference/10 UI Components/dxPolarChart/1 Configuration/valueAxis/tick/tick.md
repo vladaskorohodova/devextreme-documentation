@@ -1,4 +1,5 @@
 ---
 id: dxPolarChart.Options.valueAxis.tick
-type: Object
+type: viz/polar_chart:ValueAxisTick
+inheritsType: viz/polar_chart:ValueAxisTick
 ---

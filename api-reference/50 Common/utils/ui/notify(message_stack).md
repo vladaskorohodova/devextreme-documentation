@@ -13,9 +13,15 @@ The message content.
 ##### param(stack): Object
 An object with the following structure: *{position, direction}*.
 
+##### field(stack.direction): String
+The toast stacking direction.
+
+##### field(stack.position): String
+The initial toast position.
+
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos//WidgetsGallery/Demo/Toast/Stack/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos//WidgetsGallery/Demo/Toast/Stack/"
 }
 
 To stack toast messages, specify the `position` field in the **stack** object.
@@ -68,6 +74,8 @@ The `position` field can be one of the following:
         <td><code>{right, bottom}</code></td>
     </tr>
 </table>
+
+[note] You can specify the starting [position](/api-reference/10%20UI%20Components/dxToast/1%20Configuration/position.md '/Documentation/ApiReference/UI_Components/dxToast/Configuration/#position') for a non-stackable [notify message](/api-reference/50%20Common/utils/ui/notify(options_type_displayTime).md '/Documentation/ApiReference/Common/Utils/ui/#notifyoptions_type_displayTime') in the `options` configuration object.
 
 You can also specify the `direction` field in the **stack** object. It is a string that can be one of the following:
 

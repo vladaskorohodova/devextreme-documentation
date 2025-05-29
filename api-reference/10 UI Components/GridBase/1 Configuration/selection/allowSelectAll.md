@@ -1,7 +1,5 @@
 ---
 id: GridBase.Options.selection.allowSelectAll
-type: Boolean
-default: true
 ---
 ---
 ##### shortDescription
@@ -20,4 +18,8 @@ If **false**, this property disables the Select All functionality. In this case,
 #include common-demobutton-named with {
     url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/MultipleRowSelection/",
     name: "TreeList"
+}
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-select-all-checkboxes"
 }

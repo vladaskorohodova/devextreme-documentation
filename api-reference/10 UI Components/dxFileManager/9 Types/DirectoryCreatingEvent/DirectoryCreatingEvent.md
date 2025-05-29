@@ -1,0 +1,15 @@
+---
+module: ui/file_manager
+export: DirectoryCreatingEvent
+type: Object
+inherits: EventInfo,ActionEventInfo
+uid: ui/file_manager:DirectoryCreatingEvent
+generateTypeLink: 
+references: dxFileManager.Options.onDirectoryCreating
+---
+---
+##### shortDescription
+The type of the [directoryCreating]({basewidgetpath}/Events/#directoryCreating) event handler's argument.
+
+---
+<!-- Description goes here -->

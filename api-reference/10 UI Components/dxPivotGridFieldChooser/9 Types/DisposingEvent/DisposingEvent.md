@@ -1,0 +1,15 @@
+---
+module: ui/pivot_grid_field_chooser
+export: DisposingEvent
+type: Object
+inherits: EventInfo
+uid: ui/pivot_grid_field_chooser:DisposingEvent
+generateTypeLink: 
+references: dxPivotGridFieldChooser.Options.onDisposing
+---
+---
+##### shortDescription
+The type of the [disposing]({basewidgetpath}/Events/#disposing) event handler's argument.
+
+---
+<!-- Description goes here -->

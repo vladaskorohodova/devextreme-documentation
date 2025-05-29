@@ -11,7 +11,7 @@ Specifies the distance between the indicator and the invisible scale line.
     url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/CustomLayout/",
     name: "CircularGauge"
 }
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/CustomLayoutLinearGauge/",
+#include common-demobutton-named with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/CustomLayoutLinearGauge/",
     name: "LinearGauge"
 }

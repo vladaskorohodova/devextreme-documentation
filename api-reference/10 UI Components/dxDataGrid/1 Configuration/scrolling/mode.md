@@ -1,8 +1,5 @@
 ---
 id: dxDataGrid.Options.scrolling.mode
-acceptValues: 'infinite' | 'standard' | 'virtual'
-type: String
-default: 'standard'
 ---
 ---
 ##### shortDescription
@@ -20,18 +17,20 @@ A user scrolls a single page only. Scrolling is available only if [all rows of a
 The component loads pages while they are visible within the viewport and removes them once they leave it. In this mode, users can move to any page instantly. If the component takes time to load and render rows, they display gray boxes. [Rendering optimization](/concepts/05%20UI%20Components/DataGrid/10%20Enhance%20Performance%20on%20Large%20Datasets/030%20Rendering%20Optimization/00%20Rendering%20Optimization.md '/Documentation/Guide/UI_Components/DataGrid/Enhance_Performance_on_Large_Datasets/#Rendering_Optimization') can reduce render time and remove the gray boxes.
 
 - **Infinite**      
-The component loads the next page once the scrollbar reaches the end of its scale. In this mode, users scroll data gradually from the first to the last page. Row selection in **infinite** and **virtual** scroll mode with Shift+Click does not work in the following cases:
-    - Deferred selection is enabled.
-    - Row grouping is enabled.
-    - The [allowSelectAll](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/selection/allowSelectAll.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/selection/#allowSelectAll') property is set to **false**.
+The component loads the next page once the scrollbar reaches the end of its scale. In this mode, users scroll data gradually from the first to the last page.
 
 [note]
 
 - Set the **grouping**.[allowCollapsing](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/grouping/allowCollapsing.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/grouping/#allowCollapsing') property to **false** when you use infinite scrolling in conjunction with grouping.
 
-- Specify the component's [height](/api-reference/10%20UI%20Components/DOMComponent/1%20Configuration/height.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/#height') if you use virtual or infinite scrolling.
+- Specify the component's [height](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/height.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/#height') if you use virtual or infinite scrolling.
 
 - Set **editing**.[refreshMode](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/editing/refreshMode.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/editing/#refreshMode') to `repaint` to support editing if you use infinite scrolling.
+
+- Row selection in **infinite** and **virtual** scroll mode with Shift+Click does not work in the following cases:
+    - Deferred selection is enabled.
+    - Row grouping is enabled.
+    - The [allowSelectAll](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/selection/allowSelectAll.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/selection/#allowSelectAll') property is set to **false**.
 
 [/note]
 

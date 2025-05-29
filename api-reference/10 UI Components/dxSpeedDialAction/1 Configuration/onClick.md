@@ -6,7 +6,7 @@ type: function(e)
 ##### shortDescription
 A function that is executed when the FAB or speed dial action button is clicked or tapped.
 
-##### param(e): Object
+##### param(e): ui/speed_dial_action:ClickEvent
 Information about the event that caused the function execution.
 
 ##### field(e.actionElement): DxElement
@@ -25,6 +25,6 @@ A DOM element in which the UI component is initialized. It is an <a href="https:
 The model data. Available only if you use Knockout.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FloatingActionButton/Overview/jQuery/MaterialBlueLight/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FloatingActionButton/Overview"
 }

@@ -1,0 +1,15 @@
+---
+module: ui/tree_list
+export: RowCollapsingEvent
+type: Object
+inherits: Cancelable,EventInfo,RowKeyInfo
+uid: ui/tree_list:RowCollapsingEvent
+generateTypeLink: 
+references: dxTreeList.Options.onRowCollapsing
+---
+---
+##### shortDescription
+The type of the [rowCollapsing]({basewidgetpath}/Events/#rowCollapsing) event handler's argument.
+
+---
+<!-- Description goes here -->

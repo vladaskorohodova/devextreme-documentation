@@ -4,10 +4,13 @@ type: function(e)
 default: null
 ---
 ---
-##### param(e): Object
+##### shortDescription
+A function that is executed when a collection item is clicked or tapped.
+
+##### param(e): ui/list:ItemClickEvent
 Information about the event.
 
-##### field(e.component): dxList
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement

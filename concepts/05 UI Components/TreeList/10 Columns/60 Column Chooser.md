@@ -1,4 +1,4 @@
-The column chooser allows a user to change the set of columns at runtime. It is configured using the [columnChooser](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/columnChooser '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/columnChooser/') object and may operate in two [modes](/api-reference/40%20Common%20Types/00%20Grids/ColumnChooser/mode.md '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/columnChooser/#mode'): the default drag and drop mode and the select mode designed for touch devices.
+The column chooser allows a user to change the set of columns at runtime. It is configured using the [columnChooser](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/columnChooser '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/columnChooser/') object and may operate in two [modes](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/columnChooser/mode.md '/Documentation/ApiReference/UI_Components/dxTreeList/Configuration/columnChooser/#mode'): the default drag and drop mode and the select mode designed for touch devices.
 
 ---
 ##### jQuery
@@ -302,8 +302,8 @@ Call the [showColumnChooser()](/api-reference/10%20UI%20Components/GridBase/3%20
     
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/ColumnChooser/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeList/ColumnChooser/"
 }
 
 #####See Also#####

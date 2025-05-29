@@ -1,7 +1,6 @@
 ---
 id: dxMap.Options.type
-acceptValues: 'hybrid' | 'roadmap' | 'satellite'
-type: String
+type: Enums.MapType
 default: 'roadmap'
 ---
 ---
@@ -10,6 +9,6 @@ The type of a map to display.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Map/ProvidersAndTypes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Map/ProvidersAndTypes/"
 }

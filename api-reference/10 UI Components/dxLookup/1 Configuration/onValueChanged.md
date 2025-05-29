@@ -7,10 +7,10 @@ default: null
 ##### shortDescription
 A function that is executed after the UI component's [value](/api-reference/10%20UI%20Components/dxDropDownList/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxLookup/Configuration/#value') is changed.
 
-##### param(e): Object
+##### param(e): ui/lookup:ValueChangedEvent
 Information about the event.
 
-##### field(e.component): dxLookup
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -29,8 +29,8 @@ The UI component's previous value.
 The UI component's new value.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Lookup/EventHandling/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Lookup/EventHandling/"
 }
 
 #####See Also#####

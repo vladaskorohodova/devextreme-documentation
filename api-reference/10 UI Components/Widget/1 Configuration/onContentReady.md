@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is executed when the UI component is rendered and each time the component is repainted.
 
-##### param(e): Object
+##### param(e): EventInfo
 Information about the event.
 
 ##### field(e.component): {WidgetName}
@@ -17,6 +17,6 @@ The UI component's instance.
 #include common-ref-elementparam with { element: "UI component" }
 
 ##### field(e.model): any
-Model data. Available only when using Knockout.
+The model data. Available only if you use Knockout.
 
 ---

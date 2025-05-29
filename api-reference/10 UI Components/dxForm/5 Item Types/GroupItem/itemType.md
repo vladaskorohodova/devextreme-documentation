@@ -1,7 +1,6 @@
 ---
 id: dxFormGroupItem.itemType
-acceptValues: 'empty' | 'group' | 'simple' | 'tabbed' | 'button'
-type: String
+type: Enums.FormItemType
 default: 'simple'
 ---
 ---
@@ -9,8 +8,8 @@ default: 'simple'
 Specifies the item's type. Set it to *"group"* to create a group item.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/GroupedFields/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/GroupedFields/"
 }
 
 #####See Also#####

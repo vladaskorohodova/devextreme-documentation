@@ -7,13 +7,13 @@ default: 'item'
 ##### shortDescription
 Specifies a custom template for appointments.
 
-##### param(model): Object
+##### param(model): ui/scheduler:AppointmentTemplateData | Object
 The data of the appointment being customized.
 
-##### field(model.appointmentData): Object
+##### field(model.appointmentData): dxSchedulerAppointment
 The appointment's data object.
 
-##### field(model.targetedAppointmentData): Object
+##### field(model.targetedAppointmentData): dxSchedulerAppointment
 <!-- %field(model.targetedAppointmentData)% -->
 
 ##### param(itemIndex): Number
@@ -26,8 +26,8 @@ The appointment's index.
 A template name or container.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/CustomTemplates/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/CustomTemplates/"
 }
 
 #####See Also#####

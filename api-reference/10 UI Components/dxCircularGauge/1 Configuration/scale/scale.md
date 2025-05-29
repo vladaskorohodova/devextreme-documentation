@@ -1,6 +1,7 @@
 ---
 id: dxCircularGauge.Options.scale
-type: Object
+type: viz/circular_gauge:Scale
+inheritsType: viz/circular_gauge:Scale
 ---
 ---
 ##### shortDescription

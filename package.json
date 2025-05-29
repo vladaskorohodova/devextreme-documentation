@@ -9,9 +9,11 @@
     "url": "https://github.com/DevExpress/devextreme-documentation.git"
   },
   "devDependencies": {
-    "devextreme-internal-tools": "^9.1.0"
+    "devextreme-internal-tools": "^10.0.0-beta.21",
+    "ts-node": "^10.9.1"
   },
   "scripts": {
+    "make-compact-docs": "dx-tools make-compact-docs --docs-root ./",
     "generate-content-map": "dx-tools generate-content-map --docs-root ./ --version 23.1 --syntaxdata-path ./metadata/syntax-data.json",
     "generate-syntax-data": "dx-tools generate-syntax-data --output-path ./metadata/syntax-data.json",
     "generate-extra-topic": "dx-tools generate-extra-topics --docs-root ./ --version 23.1",
@@ -19,6 +21,11 @@
     "update-links": "dx-tools update-links --docs-root ./",
     "validate-docs": "dx-tools validate-docs --docs-root ./",
     "validate-modules-guide": "dx-tools validate-modules-guide --modules-meta ./metadata/modules-meta.json --modules-guide-path \"./concepts/Common/Modularity/02 DevExtreme Modules Structure\"",
-    "validate-links": "dx-tools update-links --docs-root ./ --validation true"
+    "validate-links": "dx-tools update-links --docs-root ./ --validation true",
+    "rename-topics": "ts-node ./tools/updateFolder.ts",
+    "rename-uid": "ts-node ./tools/rename-uid.ts ./api-reference uid-map.json"
+  },
+  "dependencies": {
+    "@types/node": "^20.3.2"
   }
 }

@@ -1,4 +1,5 @@
 ---
 id: dxPolarChart.Options.argumentAxis.minorTick
-type: Object
+type: viz/polar_chart:ArgumentAxisMinorTick
+inheritsType: viz/polar_chart:ArgumentAxisMinorTick
 ---

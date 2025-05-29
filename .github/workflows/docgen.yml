@@ -10,20 +10,23 @@ jobs:
 
     steps:
         - name: Checkout Docs
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
           with:
             path: documentation
-            token: ${{ secrets.DXROBOT_PAT }}
-            ssh-key: ${{ secrets.DXROBOT_SK }}
             ref: ${{ github.ref_name }}
 
         - name: Checkout DevExtreme
-          uses: actions/checkout@v2
+          uses: actions/checkout@v4
           with:
             path: devextreme
             repository: devexpress/devextreme
             ref: ${{ github.ref_name }}
-        
+
+        - name: Set up .NET
+          uses: actions/setup-dotnet@v4
+          with:
+            dotnet-version: 6.0.x
+
         - name: NPM - devextreme
           working-directory: devextreme
           run: |
@@ -67,6 +70,7 @@ jobs:
 
         - name: Publish changes
           working-directory: documentation
+          shell: bash
           run: |
             formatted_time=$(date +"%d_%m_%y_%Hh%Mm")
             branch_name="dxrobot/${{ github.ref_name }}_D$formatted_time"
@@ -79,6 +83,13 @@ jobs:
 
             escaped_pwd=$(echo $(pwd)/ | sed --expression 's/\//\\\//g')
             cat ../artifacts/internal-tools/Readme.md | sed -e "s/$escaped_pwd//g" > prbody.md
+            
+            MAXSIZE=65536
+            FILESIZE=$(stat -c%s prbody.md)
+            
+            if ((FILESIZE > MAXSIZE)); then
+              printf "Shown 64k bytes of total $FILESIZE\n$(tail -c 65490 prbody.md)" > prbody.md
+            fi
 
             jq -n \
               --arg head "$branch_name" \
@@ -90,12 +101,12 @@ jobs:
             curl \
                 -X POST \
                 -H "Accept: application/vnd.github.v3+json" \
-                -H "Authorization: Bearer ${{ secrets.DXROBOT_PAT }}" \
+                -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
                 https://api.github.com/repos/${{ github.repository }}/pulls \
                 --data-binary @prdata.json
 
         - name: Archive internal-tools artifacts
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: internal-tools-artifacts
             path: artifacts/internal-tools/

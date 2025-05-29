@@ -1,0 +1,15 @@
+---
+module: ui/data_grid
+export: RowValidatingEvent
+type: Object
+inherits: EventInfo,RowValidatingInfo
+uid: ui/data_grid:RowValidatingEvent
+generateTypeLink: 
+references: dxDataGrid.Options.onRowValidating
+---
+---
+##### shortDescription
+The type of the [rowValidating]({basewidgetpath}/Events/#rowValidating) event handler's argument.
+
+---
+<!-- Description goes here -->

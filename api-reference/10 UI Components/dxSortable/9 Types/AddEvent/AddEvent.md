@@ -1,0 +1,14 @@
+---
+module: ui/sortable
+export: AddEvent
+type: Object
+uid: ui/sortable:AddEvent
+generateTypeLink: 
+references: dxSortable.Options.onAdd
+---
+---
+##### shortDescription
+The type of the [add]({basewidgetpath}/Events/#add) event handler's argument.
+
+---
+<!-- Description goes here -->

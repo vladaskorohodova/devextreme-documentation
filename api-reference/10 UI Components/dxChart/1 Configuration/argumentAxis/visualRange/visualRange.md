@@ -1,9 +1,9 @@
 ---
 id: dxChart.Options.argumentAxis.visualRange
-type: Object | Array<Number, String, Date>
 inherits: VisualRange
 firedEvents: optionChanged
 notUsedInTheme: 
+type: Object | Array<Number, String, Date>
 ---
 ---
 ##### shortDescription
@@ -17,8 +17,8 @@ Defines the axis' displayed range. Cannot be wider than the [wholeRange](/api-re
     elementType: "[argumentType](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/argumentAxis/argumentType.md '/Documentation/ApiReference/UI_Components/dxChart/Configuration/argumentAxis/#argumentType')"
 }
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/ZoomingAndScrolling/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/ZoomingAndScrolling/"
 }
 
 To specify the minimum visual range that a user can set, use the [minVisualRangeLength](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/argumentAxis/minVisualRangeLength '/Documentation/ApiReference/UI_Components/dxChart/Configuration/argumentAxis/minVisualRangeLength/') property.

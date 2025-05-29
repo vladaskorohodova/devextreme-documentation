@@ -4,7 +4,7 @@ type: dxFormSimpleItem
 ---
 ---
 ##### shortDescription
-Configures the form item that the column produces in the editing state. Applies only if **editing**.[mode](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/editing/mode.md '{basewidgetpath}/Configuration/editing/#mode') is *"form"* or *"popup"*.
+Configures the form item that the column produces in the editing state. Applies only if **editing**.[mode](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/editing/mode.md '{basewidgetpath}/Configuration/editing/#mode') is *"form"* or *"popup"*.
 
 ---
 In the following code, the `Full_Name` grid column in the editing state produces a form item that spans two form columns. The item's label is on top of the editor:
@@ -153,7 +153,19 @@ In the following code, the `Full_Name` grid column in the editing state produces
     
 ---
 
-[note] The **formItem** object does not allow you to specify a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template'). Use the column's [editCellTemplate](/api-reference/_hidden/dxDataGridColumn/editCellTemplate.md '{basewidgetpath}/Configuration/columns/#editCellTemplate') instead.
+[note]
+
+- The **formItem** object does not allow you to specify a [template](/api-reference/10%20UI%20Components/dxForm/5%20Item%20Types/SimpleItem/template.md '/Documentation/ApiReference/UI_Components/dxForm/Item_Types/SimpleItem/#template'). Use the column's [editCellTemplate](/api-reference/_hidden/dxDataGridColumn/editCellTemplate.md '{basewidgetpath}/Configuration/columns/#editCellTemplate') instead.
+
+- Do not use **formItem** to override editor's **onValueChanged**. Implement [onEditorPreparing](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/onEditorPreparing.md '{basewidgetpath}/Configuration/#onEditorPreparing') instead.
+
+- The component does not check validation rules in the **formItem** object. Use the [columns.validationRules](/api-reference/_hidden/GridBaseColumn/formItem.md '{basewidgetpath}/Configuration/columns/#formItem') property to customize validation instead. For more information, refer to the [Data Validation](/concepts/05%20UI%20Components/DataGrid/20%20Editing/50%20Data%20Validation.md '/Documentation/Guide/UI_Components/DataGrid/Editing/#Data_Validation') article.
+
+[/note]
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-display-htmleditor-in-form-editing-mode"
+}
 
 #####See Also#####
 - [Form Edit Mode](/concepts/05%20UI%20Components/DataGrid/20%20Editing/10%20User%20Interaction/40%20Form%20Mode.md '/Documentation/Guide/UI_Components/{WidgetName}/Editing/#User_Interaction/Form_Mode')

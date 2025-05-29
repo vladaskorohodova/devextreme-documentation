@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is executed before an appointment is added to the data source.
 
-##### param(e): Object
+##### param(e): ui/scheduler:AppointmentAddingEvent
 Information about the event.
 
 ##### field(e.appointmentData): dxSchedulerAppointment
@@ -17,7 +17,7 @@ The data of the appointment to be added.
 Allows you to cancel appointment adding.        
 If you pass a Promise to this field, appointment adding is continued or canceled once the Promise has been resolved.
 
-##### field(e.component): dxScheduler
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -27,6 +27,6 @@ The UI component's instance.
 Model data. Available only if Knockout is used.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/CellTemplates/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Scheduler/CellTemplates/"
 }

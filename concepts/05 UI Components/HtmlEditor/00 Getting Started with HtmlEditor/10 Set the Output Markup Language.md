@@ -1,6 +1,6 @@
-The HtmlEditor can output markup in HTML or Markdown. Use the [valueType](/api-reference/10%20UI%20Components/dxHtmlEditor/1%20Configuration/valueType.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/#valueType') property to define the language. If you use Markdown, add the <a href="https://www.npmjs.com/package/turndown" target="_blank">turndown</a> and <a href="https://www.npmjs.com/package/devextreme-showdown" target="_blank">devextreme-showdown</a> libraries to your project. In this tutorial, HTML is used as the output language.
+The HtmlEditor can output markup in HTML or Markdown. Use the [valueType](/api-reference/10%20UI%20Components/dxHtmlEditor/1%20Configuration/valueType.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/#valueType') property to define the language. If you use Markdown, add the <a href="https://www.npmjs.com/package/turndown" target="_blank">turndown</a> and <a href="https://www.npmjs.com/package/showdown" target="_blank">showdown</a> libraries to your project. In this tutorial, HTML is used as the output language.
 
-The control stores the document markup in the [value](/api-reference/10%20UI%20Components/Editor/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/#value') property. If you use this property to specify the document's initial content, the language should match **valueType**. You can also declare HTML content inside the HtmlEditor element. In this case, the language (HTML) and **valueType** can differ.
+The control stores the document markup in the [value](/api-reference/10%20UI%20Components/dxHtmlEditor/1%20Configuration/value.md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Configuration/#value') property. If you use this property to specify the document's initial content, the language should match **valueType**. You can also declare HTML content inside the HtmlEditor element. In this case, the language (HTML) and **valueType** can differ.
 
 ---
 ##### jQuery
@@ -86,6 +86,21 @@ The control stores the document markup in the [value](/api-reference/10%20UI%20C
     .dx-htmleditor-content table td:last-child {
         text-align: right;
     }
+
+[note]
+
+To update the value at the runtime, call the [option(optionName, optionValue)](/api-reference/10%20UI%20Components/Component/3%20Methods/option(optionName_optionValue).md '/Documentation/ApiReference/UI_Components/dxHtmlEditor/Methods/#optionoptionName_optionValue') method:
+
+    <!-- tab: index.js -->
+    $(function () {
+        const editor = $("#html-editor").dxHtmlEditor({
+            valueType: "html" 
+        }).dxHtmlEditor('instance');
+        
+        editor.option("value", "<h4>This is the new html formatted content</h4>");
+    });
+
+[/note]
 
 ##### Angular
 

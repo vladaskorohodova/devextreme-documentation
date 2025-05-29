@@ -4,10 +4,13 @@ type: function(e)
 default: null
 ---
 ---
-##### param(e): Object
+##### shortDescription
+A function that is executed when a collection item is right-clicked or pressed.
+
+##### param(e): ui/tree_view:ItemContextMenuEvent
 Information about the event.
 
-##### field(e.component): dxTreeView
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -33,6 +36,6 @@ The target item's node.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeView/ContextMenuIntegration/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/TreeView/ContextMenuIntegration/"
 }

@@ -1,12 +1,13 @@
 ---
 id: GridBase.Options.keyboardNavigation
-type: Object
+type: common/grids:KeyboardNavigation
+inheritsType: common/grids:KeyboardNavigation
 ---
 ---
 ##### shortDescription
 Configures keyboard navigation.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/{WidgetName}/CustomizeKeyboardNavigation/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/{WidgetName}/CustomizeKeyboardNavigation/"
 }

@@ -1,4 +1,4 @@
-Use nested configuration components. In the following example, we configure the [Chart](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Overview/React/Light) UI component's [tooltip](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/tooltip '/Documentation/ApiReference/UI_Components/dxChart/Configuration/tooltip/') property:
+Use nested configuration components. In the following example, we configure the [Chart](https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/Overview) UI component's [tooltip](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/tooltip '/Documentation/ApiReference/UI_Components/dxChart/Configuration/tooltip/') property:
  
     <!-- tab: Function component -->
     import Chart, {
@@ -74,7 +74,7 @@ Object type properties that depend on other properties' values are not implement
 
 [important] We recommend that you declare the object outside the configuration component to prevent possible issues caused by unnecessary re-rendering.
 
-If you use <a href="https://reactjs.org/docs/hooks-intro.html" target="_blank">React Hooks</a> and need to define a configuration object inside a function component, wrap this object in the <a href="https://reactjs.org/docs/hooks-reference.html#usememo" target="_blank">useMemo</a> hook to preserve the object's reference between state changes:
+If you use <a href="https://react.dev/reference/react/hooks" target="_blank">React Hooks</a> and need to define a configuration object inside a function component, wrap this object in the <a href="https://react.dev/reference/react/useMemo" target="_blank">useMemo</a> hook to preserve the object's reference between state changes:
 
     <!-- tab: App.js -->
     import React, { useState, useMemo } from 'react';

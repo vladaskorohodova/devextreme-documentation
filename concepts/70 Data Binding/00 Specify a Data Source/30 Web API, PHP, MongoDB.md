@@ -1,5 +1,3 @@
-[note] This article describes how to bind a DevExtreme UI component to a remote data service in jQuery, Angular, Vue, and React. For information on data binding in ASP.NET MVC Controls, refer to <a href="https://docs.devexpress.com/AspNetCore/401020/devextreme-based-controls/concepts/bind-controls-to-data/api-controllers" target="_blank">docs.devexpress.com</a>.
-
 DevExtreme provides the following extensions for binding to Web API, PHP, and MongoDb services:
 
 - <a href="https://github.com/DevExpress/DevExtreme.AspNet.Data/blob/master/README.md" target="_blank">DevExtreme.AspNet.Data</a>
@@ -163,6 +161,13 @@ To access the server from the client, configure the [CustomStore](/api-reference
     export default App;
 
 ---
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-pivotgrid-with-webapi"
+}
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-datagrid-with-webapi"
+}
 
 #####See Also#####
 - <a href="https://community.devexpress.com/blogs/oliver/archive/2017/03/24/devextreme-real-world-patterns.aspx" target="_blank">DevExtreme with MongoDB - Real World Patterns</a>

@@ -1,7 +1,6 @@
 ---
 id: dxRangeSelector.Options.scale.type
-acceptValues: 'continuous' | 'discrete' | 'logarithmic' | 'semidiscrete'
-type: String
+type: Enums.AxisScale
 default: undefined
 ---
 ---
@@ -41,6 +40,6 @@ Another example: a semidiscrete scale built on numeric values. This time, the sc
         }
     };
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/RangeSelector/LogarithmicScale/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/RangeSelector/LogarithmicScale/"
 }

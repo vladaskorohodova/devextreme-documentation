@@ -1,4 +1,4 @@
-When a tooltip becomes shown or hidden, the Chart fires the [tooltipShown](/api-reference/10%20UI%20Components/BaseChart/4%20Events/tooltipShown.md '/Documentation/ApiReference/UI_Components/dxChart/Events/#tooltipShown') or [tooltipHidden](/api-reference/10%20UI%20Components/BaseChart/4%20Events/tooltipHidden.md '/Documentation/ApiReference/UI_Components/dxChart/Events/#tooltipHidden') event that you can handle with a function. If the handling function is not going to be changed during the lifetime of the UI component, assign it to the [onTooltipShown](/api-reference/10%20UI%20Components/BaseChart/1%20Configuration/onTooltipShown.md '/Documentation/ApiReference/UI_Components/dxChart/Configuration/#onTooltipShown') or [onTooltipHidden](/api-reference/10%20UI%20Components/BaseChart/1%20Configuration/onTooltipHidden.md '/Documentation/ApiReference/UI_Components/dxChart/Configuration/#onTooltipHidden') property respectively, when you configure the UI component.
+When a tooltip becomes shown or hidden, the Chart fires the [tooltipShown](/api-reference/10%20UI%20Components/BaseChart/4%20Events/tooltipShown.md '/Documentation/ApiReference/UI_Components/dxChart/Events/#tooltipShown') or [tooltipHidden](/api-reference/10%20UI%20Components/BaseChart/4%20Events/tooltipHidden.md '/Documentation/ApiReference/UI_Components/dxChart/Events/#tooltipHidden') event that you can handle with a function. If the handling function is not going to be changed during the lifetime of the UI component, assign it to the [onTooltipShown](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/onTooltipShown.md '/Documentation/ApiReference/UI_Components/dxChart/Configuration/#onTooltipShown') or [onTooltipHidden](/api-reference/10%20UI%20Components/dxChart/1%20Configuration/onTooltipHidden.md '/Documentation/ApiReference/UI_Components/dxChart/Configuration/#onTooltipHidden') property respectively, when you configure the UI component.
 
 ---
 ##### jQuery
@@ -105,7 +105,10 @@ When a tooltip becomes shown or hidden, the Chart fires the [tooltipShown](/api-
 
 ---
 
-If you are going to change the event handlers at runtime or if you need to attach several handlers to a single event, subscribe to this event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxChart/Methods/#oneventName_eventHandler') method.  This approach is more typical of jQuery.
+---
+##### jQuery
+
+If you are going to change the event handlers at runtime or if you need to attach several handlers to a single event, subscribe to this event using the [on(eventName, eventHandler)](/api-reference/10%20UI%20Components/Component/3%20Methods/on(eventName_eventHandler).md '/Documentation/ApiReference/UI_Components/dxChart/Methods/#oneventName_eventHandler') method.
 
     <!--JavaScript-->
     var tooltipShownHandler1 = function (e) {
@@ -121,6 +124,8 @@ If you are going to change the event handlers at runtime or if you need to attac
     $("#chartContainer").dxChart("instance")
         .on("tooltipShown", tooltipShownHandler1)
         .on("tooltipShown", tooltipShownHandler2);
+
+---
 
 #####See Also#####
 #include common-link-handleevents

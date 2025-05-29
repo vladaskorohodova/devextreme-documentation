@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before a context menu is displayed.
 
-##### param(e): Object
+##### param(e): ui/file_manager:ContextMenuShowingEvent
 Information about the event that caused the function's execution.
 
 ##### field(e.cancel): Boolean
 Allows you to cancel showing the context menu.
 
-##### field(e.component): dxFileManager
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -31,13 +31,13 @@ Model data. Available only if you use Knockout.
 ##### field(e.targetElement): DxElement
 The file system item's container. It is an [HTML Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) or a [jQuery Element](https://api.jquery.com/Types/#jQuery) when you use jQuery. This element can be a grid element or a thumbnail (for the items view area), or a tree view node (for the navigation panel). The **targetElement** field value is 'undefined' if you click on empty space in the items view area.
 
-##### field(e.viewArea): 'navPane' | 'itemView'
+##### field(e.viewArea): Enums.FileManagerViewArea
 Specifies whether the context menu is invoked in the navigation panel or in the items view area.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileManager/UICustomization/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/FileManager/UICustomization/"
 }
 
 ---

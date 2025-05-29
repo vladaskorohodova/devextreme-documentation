@@ -1,7 +1,6 @@
 ---
 id: dxBarGauge.Options.palette
-acceptValues: 'Bright' | 'Harmony Light' | 'Ocean' | 'Pastel' | 'Soft' | 'Soft Pastel' | 'Vintage' | 'Violet' | 'Carmine' | 'Dark Moon' | 'Dark Violet' | 'Green Mist' | 'Soft Blue' | 'Material' | 'Office'
-type: Array<String> | String
+type: Array<String> | Enums.Palette
 default: 'Material'
 ---
 ---
@@ -11,8 +10,8 @@ Sets the palette to be used for colorizing bars in the gauge.
 ---
 #include dataviz-ref-palette
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Palette/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Gauges/Palette/"
 }
 
 #####See Also#####

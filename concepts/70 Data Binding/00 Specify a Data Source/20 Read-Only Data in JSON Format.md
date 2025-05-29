@@ -1,5 +1,3 @@
-[note] This article describes how to bind a DevExtreme UI component to JSON data in jQuery, Angular, Vue, and React. For information on data binding in ASP.NET MVC Controls, refer to <a href="https://docs.devexpress.com/AspNetCore/401021/devextreme-based-controls/concepts/bind-controls-to-data/read-only-data-in-json-format" target="_blank">docs.devexpress.com</a>.
-
 To bind a UI component to JSON data, pass the data URL to the UI component's [dataSource](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/dataSource.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/#dataSource') property.
 
 ---
@@ -137,6 +135,7 @@ The following code shows a **CustomStore** configuration in which the **load** f
     <!-- tab: app.component.ts -->
     import { Component } from '@angular/core';
     import { HttpClient, HttpParams } from '@angular/common/http';
+    import { lastValueFrom } from 'rxjs';
 
     import CustomStore from 'devextreme/data/custom_store';
 
@@ -156,10 +155,9 @@ The following code shows a **CustomStore** configuration in which the **load** f
                     let params: HttpParams = new HttpParams();
                     params.set('param1', 'value1')
                           .set('param2', 'value2');
-                    return this.http.get('https://mydomain.com/MyDataService', { 
+                    return lastValueFrom(this.http.get('https://mydomain.com/MyDataService', { 
                             params: params
-                        })
-                        .toPromise()
+                        }))
                         .then(result => {
                             // You can process the response here
                             return result;

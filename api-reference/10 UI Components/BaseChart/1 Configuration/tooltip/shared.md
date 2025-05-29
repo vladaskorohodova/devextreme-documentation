@@ -1,7 +1,5 @@
 ---
 id: BaseChart.Options.tooltip.shared
-type: Boolean
-default: false
 ---
 ---
 ##### shortDescription
@@ -25,8 +23,8 @@ This property can have one of the following values:
     </tr>
 </table>
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/MultipleAxes/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/MultipleAxes/"
 }
 
 #####See Also#####

@@ -1,0 +1,15 @@
+---
+module: ui/button_group
+export: DisposingEvent
+type: Object
+inherits: EventInfo
+uid: ui/button_group:DisposingEvent
+generateTypeLink: 
+references: dxButtonGroup.Options.onDisposing
+---
+---
+##### shortDescription
+The type of the [disposing]({basewidgetpath}/Events/#disposing) event handler's argument.
+
+---
+<!-- Description goes here -->

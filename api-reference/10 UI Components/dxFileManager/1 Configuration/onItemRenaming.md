@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before a file or directory is renamed.
 
-##### param(e): Object
+##### param(e): ui/file_manager:ItemRenamingEvent
 Information about the event.
 
 ##### field(e.cancel): Boolean | Promise<void>
 Allows you to cancel the file or directory rename.
 
-##### field(e.component): dxFileManager
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -32,7 +32,7 @@ The file or directory to be renamed.
 Model data. Available only if you use Knockout.
 
 ##### field(e.newName): String
-The new name of the file or directory.
+The new name of the file or directory. This parameter is read-only.
 
 ---
 

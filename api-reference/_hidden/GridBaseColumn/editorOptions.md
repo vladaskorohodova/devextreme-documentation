@@ -4,7 +4,7 @@ type: any
 ---
 ---
 ##### shortDescription
-Configures the default UI component used for [editing](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/editing '{basewidgetpath}/Configuration/editing/') and filtering in the [filter row](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/filterRow '{basewidgetpath}/Configuration/filterRow/').
+Configures the default UI component used for [editing](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/editing '{basewidgetpath}/Configuration/editing/') and filtering in the [filter row](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/filterRow '{basewidgetpath}/Configuration/filterRow/').
 
 ---
 In this object, you can specify the default UI component's properties (except **onValueChanged**, which you can specify in [onEditorPreparing](/api-reference/10%20UI%20Components/dxDataGrid/1%20Configuration/onEditorPreparing.md '{basewidgetpath}/Configuration/#onEditorPreparing')).
@@ -39,10 +39,10 @@ The default editor UI component depends on the column configuration. The followi
     </tr>
 </table>
 
-Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components in Angular, Vue, and React. In these frameworks, specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component in Vue and React to prevent possible issues caused by unnecessary re-rendering.
-
 ---
 ##### Angular
+
+Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object.
 
     <!-- tab: app.component.html -->
     <dx-{widget-name} ... >
@@ -72,6 +72,8 @@ Because of this dependency, **editorOptions** cannot be typed and are not implem
     export class AppModule { }
 
 ##### Vue
+
+Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component to prevent possible issues caused by unnecessary re-rendering.
 
     <!-- tab: App.vue -->
     <template>
@@ -104,6 +106,8 @@ Because of this dependency, **editorOptions** cannot be typed and are not implem
 
 ##### React
 
+Because of this dependency, **editorOptions** cannot be typed and are not implemented as nested configuration components. Specify **editorOptions** with an object. We recommend that you declare the object outside the configuration component to prevent possible issues caused by unnecessary re-rendering.
+
     <!-- tab: App.js -->
     import React from 'react';
 
@@ -130,8 +134,8 @@ Because of this dependency, **editorOptions** cannot be typed and are not implem
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CustomEditors/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CustomEditors/"
 }
 
 Other properties that allow editor customization include:

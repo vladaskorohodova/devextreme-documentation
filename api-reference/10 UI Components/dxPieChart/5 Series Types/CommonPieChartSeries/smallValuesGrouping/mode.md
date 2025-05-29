@@ -1,7 +1,6 @@
 ---
 id: dxPieChartSeriesTypes.CommonPieChartSeries.smallValuesGrouping.mode
-acceptValues: 'none' | 'smallValueThreshold' | 'topN'
-type: String
+type: Enums.SmallValuesGroupingMode
 default: 'none'
 ---
 ---
@@ -17,6 +16,6 @@ To group all segments with a value less than the value of the **threshold** prop
 
 To switch the grouping off, assign *'none'* to the **mode** property.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/DoughnutWithTopNSeries/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/DoughnutWithTopNSeries/"
 }

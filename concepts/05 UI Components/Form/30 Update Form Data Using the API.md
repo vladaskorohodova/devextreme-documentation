@@ -1,3 +1,7 @@
+
+---
+##### jQuery
+
 If you need to update form data at runtime, redefine the [formData](/api-reference/10%20UI%20Components/dxForm/1%20Configuration/formData.md '/Documentation/ApiReference/UI_Components/dxForm/Configuration/#formData') object. In this case, form item values are updated automatically and the UI component is rerendered from scratch. In the following example, the [SelectBox](/api-reference/10%20UI%20Components/dxSelectBox '/Documentation/ApiReference/UI_Components/dxSelectBox/') UI component changes the **formData** object.
 
     <!--JavaScript-->
@@ -26,8 +30,8 @@ If you need to update form data at runtime, redefine the [formData](/api-referen
         });
     });
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Form/Overview/"
 }
 
 The Form UI component provides methods that update specific **formData** fields and rerender the corresponding editors without rerendering the whole UI component. The [updateData(dataField, value)](/api-reference/10%20UI%20Components/dxForm/3%20Methods/updateData(dataField_value).md '/Documentation/ApiReference/UI_Components/dxForm/Methods/#updateDatadataField_value') method updates the value of a single field. The [updateData(data)](/api-reference/10%20UI%20Components/dxForm/3%20Methods/updateData(data).md '/Documentation/ApiReference/UI_Components/dxForm/Methods/#updateDatadata') method updates values of several fields at once. In the following code, these methods are called on a [Button](/api-reference/10%20UI%20Components/dxButton '/Documentation/ApiReference/UI_Components/dxButton/') click.
@@ -60,10 +64,9 @@ The Form UI component provides methods that update specific **formData** fields 
         });
     });
 
-With Angular, Vue or React, two-way binding to a component property is sufficient to update [formData](/api-reference/10%20UI%20Components/dxForm/1%20Configuration/formData.md '/Documentation/ApiReference/UI_Components/dxForm/Configuration/#formData') at runtime. Swapping the whole **formData** object rerenders the UI component from scratch; updating specific **formData** fields rerenders only the corresponding editors.
-
----
 ##### Angular
+
+If you need to update form data at runtime, use two-way binding to bind the [formData](/api-reference/10%20UI%20Components/dxForm/1%20Configuration/formData.md '/Documentation/ApiReference/UI_Components/dxForm/Configuration/#formData') property to a component property. Swapping the whole **formData** object rerenders the UI component from scratch; updating specific **formData** fields rerenders only the corresponding editors.
 
     <!--HTML-->
     <dx-form [(formData)]="employee"></dx-form>
@@ -92,6 +95,8 @@ With Angular, Vue or React, two-way binding to a component property is sufficien
     })
 
 ##### Vue
+
+If you need to update form data at runtime, use two-way binding to bind the [formData](/api-reference/10%20UI%20Components/dxForm/1%20Configuration/formData.md '/Documentation/ApiReference/UI_Components/dxForm/Configuration/#formData') property to a component property. Swapping the whole **formData** object rerenders the UI component from scratch; updating specific **formData** fields rerenders only the corresponding editors.
 
     <!-- tab: App.vue -->
     <template>
@@ -132,6 +137,8 @@ With Angular, Vue or React, two-way binding to a component property is sufficien
     </script>
 
 ##### React
+
+If you need to update form data at runtime, bind the [formData](/api-reference/10%20UI%20Components/dxForm/1%20Configuration/formData.md '/Documentation/ApiReference/UI_Components/dxForm/Configuration/#formData') property to a state property. Swapping the whole **formData** object rerenders the UI component from scratch; updating specific **formData** fields rerenders only the corresponding editors.
 
     <!-- tab: App.js -->
     import React from 'react';

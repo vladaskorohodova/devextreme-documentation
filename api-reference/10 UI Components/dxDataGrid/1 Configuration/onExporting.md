@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before data is exported.
 
-##### param(e): Object
+##### param(e): ui/data_grid:ExportingEvent
 Information about the event that caused the function execution.
 
 ##### field(e.cancel): Boolean
 Deprecated.
 
-##### field(e.component): dxDataGrid
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -25,7 +25,7 @@ Deprecated.
 ##### field(e.model): any
 Model data. Available only if Knockout is used.
 
-##### field(e.format): String | 'pdf' | 'xlsx'
+##### field(e.format): Enums.DataGridExportFormat | String
 Specifies the availability and captions of data export buttons.
 
 ##### field(e.selectedRowsOnly): Boolean

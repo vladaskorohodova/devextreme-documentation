@@ -1,6 +1,7 @@
 ---
 id: dxVectorMap.Options.tooltip
-type: Object
+type: viz/vector_map:Tooltip
+inheritsType: viz/vector_map:Tooltip
 ---
 ---
 ##### shortDescription
@@ -17,6 +18,6 @@ Specify the [customizeTooltip](/api-reference/10%20UI%20Components/dxVectorMap/1
 
 You can also change the appearance of tooltips using fields of the **tooltip** configuration object.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/TooltipHTMLSupport/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/TooltipHTMLSupport/"
 }

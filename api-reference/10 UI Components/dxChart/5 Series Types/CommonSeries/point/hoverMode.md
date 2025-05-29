@@ -1,7 +1,6 @@
 ---
 id: dxChartSeriesTypes.CommonSeries.point.hoverMode
-acceptValues: 'allArgumentPoints' | 'allSeriesPoints' | 'none' | 'onlyPoint'
-type: String
+type: Enums.PointInteractionMode
 default: 'onlyPoint'
 ---
 ---
@@ -23,8 +22,8 @@ The point that a user pauses on changes its style. Points with the same argument
 * **none**   
 The point does not react to pointing to it.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/HoverMode/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Charts/HoverMode/"
 }
 
 #####See Also#####

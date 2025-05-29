@@ -1,7 +1,7 @@
 ---
 id: dxVectorMap.Options.legends.customizeText
-type: function(itemInfo)
 notUsedInTheme: 
+type: function(itemInfo)
 ---
 ---
 ##### shortDescription

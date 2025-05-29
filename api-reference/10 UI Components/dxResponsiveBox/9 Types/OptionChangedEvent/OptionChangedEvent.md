@@ -1,0 +1,15 @@
+---
+module: ui/responsive_box
+export: OptionChangedEvent
+type: Object
+inherits: EventInfo,ChangedOptionInfo
+uid: ui/responsive_box:OptionChangedEvent
+generateTypeLink: 
+references: dxResponsiveBox.Options.onOptionChanged
+---
+---
+##### shortDescription
+The type of the [optionChanged]({basewidgetpath}/Events/#optionChanged) event handler's argument.
+
+---
+<!-- Description goes here -->

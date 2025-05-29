@@ -1,4 +1,5 @@
 ---
 id: dxFunnel.Options.tooltip
-type: Object
+type: viz/funnel:Tooltip
+inheritsType: viz/funnel:Tooltip
 ---

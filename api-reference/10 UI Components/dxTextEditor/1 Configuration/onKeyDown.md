@@ -7,7 +7,7 @@ default: null
 ##### shortDescription
 A function that is executed when a user is pressing a key on the keyboard.
 
-##### param(e): Object
+##### param(e): NativeEventInfo
 Information about the event.
 
 ##### field(e.component): {WidgetName}
@@ -23,3 +23,7 @@ The UI component's instance.
 Model data. Available only if Knockout is used.
 
 ---
+
+#include btn-open-github with {
+    href: "https://github.com/DevExpress-Examples/devextreme-dropdownbox-implement-search-for-treelist"
+}

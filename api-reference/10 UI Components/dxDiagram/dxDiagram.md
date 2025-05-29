@@ -98,12 +98,11 @@ dx-diagram.js, dx.all.js
 #include common-tutorialbutton with {
     url: "/Documentation/Guide/UI_Components/Diagram/Getting_Started_with_Diagram/" 
 }
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Diagram/Overview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Diagram/Overview/"
 }
 
 #####See Also#####
-- [How to: Common Use Cases](/concepts/05%20UI%20Components/Diagram/50%20How%20To '/Documentation/Guide/UI_Components/Diagram/How_To/')
 - [End-User Documentation](https://devexpress.github.io/dotnet-eud/interface-elements-for-web/articles/diagram.html)
 #include common-link-setupdevextreme
 #include common-link-configurewidget

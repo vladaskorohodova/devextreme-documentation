@@ -8,10 +8,10 @@ notUsedInTheme:
 ##### shortDescription
 A function that is executed each time the zoom factor is changed.
 
-##### param(e): Object
+##### param(e): viz/vector_map:ZoomFactorChangedEvent
 Information about the event.
 
-##### field(e.component): dxVectorMap
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -24,6 +24,6 @@ The model data. Available only if you use Knockout.
 The updated zoom factor.
 
 ---
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/DynamicViewport/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/VectorMap/DynamicViewport/"
 }

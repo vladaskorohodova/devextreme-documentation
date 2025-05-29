@@ -7,13 +7,13 @@ default: null
 ##### shortDescription
 A function that is executed before data is exported.
 
-##### param(e): Object
+##### param(e): ui/pivot_grid:ExportingEvent
 Information about the event.
 
 ##### field(e.cancel): Boolean
 Deprecated.
 
-##### field(e.component): dxPivotGrid
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -27,6 +27,6 @@ Model data. Available only if Knockout is used.
 
 ---
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/ExcelJSOverview/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/PivotGrid/ExcelJSOverview/"
 }

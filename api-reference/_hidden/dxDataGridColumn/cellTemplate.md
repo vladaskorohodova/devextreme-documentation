@@ -48,7 +48,7 @@ The row's [type](/api-reference/10%20UI%20Components/dxDataGrid/6%20Row/rowType.
 The cell's raw value.
 
 ##### field(cellInfo.watch): function()
-Allows tracking a variable and performing actions when it changes. Applies when [repaintChangesOnly](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/repaintChangesOnly.md '{basewidgetpath}/Configuration/#repaintChangesOnly') is **true**.       
+Allows you to track a variable and respond to value changes. Applies when [repaintChangesOnly](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/repaintChangesOnly.md '{basewidgetpath}/Configuration/#repaintChangesOnly') is **true**.       
 This function has the following parameters:     
 
 - **getter(data)**: <font size="-1">Function</font>        
@@ -69,8 +69,10 @@ The following details should be taken into account when you use a **cellTemplate
 
 - In [fixed columns](/api-reference/10%20UI%20Components/GridBase/1%20Configuration/columnFixing '{basewidgetpath}/Configuration/columnFixing/'), the template is initialized and rendered twice for each cell.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CellCustomization/"
+- Template values have no effect on data operations. Implement the column's [calculateCellValue](/api-reference/_hidden/GridBaseColumn/calculateCellValue.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/columns/#calculateCellValue') or [calculateDisplayValue](/api-reference/_hidden/GridBaseColumn/calculateDisplayValue.md '/Documentation/ApiReference/UI_Components/dxDataGrid/Configuration/columns/#calculateDisplayValue') option to transform the cell's underlying value.
+
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/DataGrid/CellCustomization/"
 }
 
 #####See Also#####

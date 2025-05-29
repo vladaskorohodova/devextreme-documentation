@@ -8,10 +8,10 @@ notUsedInTheme:
 ##### shortDescription
 A function that is executed when a tooltip appears.
 
-##### param(e): Object
+##### param(e): viz/vector_map:TooltipShownEvent
 Information about the event.
 
-##### field(e.component): dxVectorMap
+##### field(e.component): {WidgetName}
 The UI component's instance.
 
 ##### field(e.element): DxElement
@@ -21,6 +21,6 @@ The UI component's instance.
 The model data. Available only if you use Knockout.
 
 ##### field(e.target): MapLayerElement | dxVectorMapAnnotationConfig
-The layer element whose tooltip is shown; described in the [Layer Element](/api-reference/10%20UI%20Components/dxVectorMap/7%20Map%20Elements/Layer%20Element '/Documentation/ApiReference/UI_Components/dxVectorMap/Map_Elements/Layer_Element/') section.
+The layer element whose tooltip is shown; described in the [Layer Element](/api-reference/10%20UI%20Components/dxVectorMap/6%20Map%20Elements/Layer%20Element '/Documentation/ApiReference/UI_Components/dxVectorMap/Map_Elements/Layer_Element/') section.
 
 ---

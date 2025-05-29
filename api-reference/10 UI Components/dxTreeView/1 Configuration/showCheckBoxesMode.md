@@ -1,7 +1,6 @@
 ---
 id: dxTreeView.Options.showCheckBoxesMode
-acceptValues: 'none' | 'normal' | 'selectAll'
-type: String
+type: Enums.TreeViewCheckBoxMode
 default: 'none'
 ---
 ---
@@ -20,8 +19,8 @@ The UI component displays one checkbox per item.
 - *"selectAll"*       
 The UI component displays one checkbox per item and one "Select All" checkbox at the top of the UI component. The [selectionMode](/api-reference/10%20UI%20Components/dxTreeView/1%20Configuration/selectionMode.md '/Documentation/ApiReference/UI_Components/dxTreeView/Configuration/#selectionMode') should be *"multiple"*.
 
-#include common-demobutton with {
-    url: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Tree_View/ItemSelectionAndCustomization/"
+#include btn-open-demo with {
+    href: "https://js.devexpress.com/Demos/WidgetsGallery/Demo/Tree_View/ItemSelectionAndCustomization/"
 }
 
 #####See Also#####

@@ -1,0 +1,15 @@
+---
+module: ui/html_editor
+export: FocusOutEvent
+type: Object
+inherits: NativeEventInfo
+uid: ui/html_editor:FocusOutEvent
+generateTypeLink: 
+references: dxHtmlEditor.Options.onFocusOut
+---
+---
+##### shortDescription
+The type of the [focusOut]({basewidgetpath}/Events/#focusOut) event handler's argument.
+
+---
+<!-- Description goes here -->
