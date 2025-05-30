@@ -1,6 +1,22 @@
-Templates are passed as properties that end with **...Template** (in jQuery, Angular, and Vue) or **...Render**/**...Component** (in React).
 
-Each template has access to the following parameters:
+---
+##### jQuery
+
+Templates are passed as properties that end with **...Template**. Each template has access to the following parameters:
+
+##### Angular
+
+Templates are passed as properties that end with **...Template**. Each template has access to the following parameters:
+
+##### Vue
+
+Templates are passed as properties that end with **...Template**. Each template has access to the following parameters:
+
+##### React
+
+Templates are passed as properties that end with **...Render** or **...Component**. Each template has access to the following parameters:
+
+---
 
 - `data`     
 A data source object or an object with fields specific to a particular template. For information on the contents of `data`, refer to the **Template Data** section of the template's API reference article.
@@ -147,8 +163,6 @@ The following code shows how to declare a template and use these parameters. Thi
 
 ---
 
-#include named-templates-note
-
 Collection UI components also support templates for individual items. Do not specify the UI component's **dataSource** property if you use individual templates.
 
 ---
@@ -179,6 +193,8 @@ Collection UI components also support templates for individual items. Do not spe
     });
 
 ##### Angular
+
+Declare **named** templates within the component's markup but outside the templated element. **Non-named** templates should be declared inside the templated element.
 
     <!-- tab: app.component.html -->
     <dx-list>
@@ -218,6 +234,8 @@ Collection UI components also support templates for individual items. Do not spe
     export class AppModule { }
 
 ##### Vue
+
+Declare **named** templates within the component's markup but outside the templated element. **Non-named** templates should be declared inside the templated element.
 
     <!-- tab: App.vue -->
     <template>
@@ -291,5 +309,20 @@ Collection UI components also support templates for individual items. Do not spe
 
 ---
 
+---
+##### Angular
+
 #####See Also#####
-- **Declare Content in the Markup**: [Angular](/Documentation/Guide/Angular_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup) | [Vue](/Documentation/Guide/Vue_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup) | [React](/Documentation/Guide/React_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup)
+- [Declare Content in the Markup](/Documentation/Guide/Angular_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup)
+
+##### Vue
+
+#####See Also#####
+- [Declare Content in the Markup](/Documentation/Guide/Vue_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup)
+
+##### React
+
+#####See Also#####
+- [Declare Content in the Markup](/Documentation/Guide/React_Components/Component_Configuration_Syntax/#Declare_Content_in_the_Markup)
+
+---
